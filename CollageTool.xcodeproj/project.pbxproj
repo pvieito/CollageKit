@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B41A1EAAAFC50047E1DD /* main.swift */; };
+		AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; };
+		AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAB894B01EB15A7200F155B0 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; };
+		AAB894B21EB15A7900F155B0 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; };
+		AAB894B31EB15A7D00F155B0 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; };
+		AAB894B41EB15A7D00F155B0 /* FoundationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAC1D6361EB01BA7009E0956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */; };
+		AAC1D6381EB01BA7009E0956 /* CXFCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */; };
+		AAC1D63A1EB01BA7009E0956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC1D6391EB01BA7009E0956 /* Assets.xcassets */; };
+		AAC1D63D1EB01BA7009E0956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC1D63B1EB01BA7009E0956 /* Main.storyboard */; };
+		AAC1D64E1EB01BC0009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
+		AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAC1D6541EB01BD1009E0956 /* CXFCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B4401EACC1360047E1DD /* CXFCollage.swift */; };
+		AAC1D6551EB01BD1009E0956 /* CXFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2614231EACE17E004E13E9 /* CXFNode.swift */; };
+		AAC1D6561EB01BD1009E0956 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D62D1EB01935009E0956 /* CGSize.swift */; };
+		AAC1D6571EB01BD1009E0956 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6271EB0144B009E0956 /* CGImage.swift */; };
+		AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
+		AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */ = {isa = PBXBuildFile; fileRef = AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */; };
+		AAD369081EB0C2B800DAC0D9 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; };
+		AAD3690B1EB0C2BA00DAC0D9 /* Commander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368FA1EB0C26600DAC0D9 /* Commander.framework */; };
+		AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
+		AAD3690D1EB0C2CF00DAC0D9 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; };
+		AAD3690E1EB0C2CF00DAC0D9 /* LoggerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
+		AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAD369261EB0D0D700DAC0D9 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; };
+		AAD369461EB0EBE500DAC0D9 /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369451EB0EBE500DAC0D9 /* CGColor.swift */; };
+		AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369551EB101A800DAC0D9 /* CXFDocument.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA50B60B1EB21C4F00F5F6F4;
+			remoteInfo = SandboxKit;
+		};
+		AA50B6481EB2272200F5F6F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AA50B60A1EB21C4F00F5F6F4;
+			remoteInfo = SandboxKit;
+		};
+		AAB894B51EB15A7D00F155B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AA2563C41E57639E0037CBED;
+			remoteInfo = FoundationKit;
+		};
+		AAC1D64C1EB01BC0009E0956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B40F1EAAAFC50047E1DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAC1D6461EB01BC0009E0956;
+			remoteInfo = CollageKit;
+		};
+		AAD368F41EB0C25B00DAC0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9D052C1A757D8B003CCB21;
+			remoteInfo = SWXMLHash;
+		};
+		AAD368F91EB0C26600DAC0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = OBJ_39;
+			remoteInfo = Commander;
+		};
+		AAD368FF1EB0C27100DAC0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA2563CF1E57639E0037CBED;
+			remoteInfo = FoundationKit;
+		};
+		AAD369011EB0C27100DAC0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AABBD9A41E5761BD00AE5B46;
+			remoteInfo = LoggerKit;
+		};
+		AAD3690F1EB0C2CF00DAC0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AABBD99C1E5761BD00AE5B46;
+			remoteInfo = LoggerKit;
+		};
+		AAD369131EB0C2CF00DAC0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CD9D052B1A757D8B003CCB21;
+			remoteInfo = SWXMLHash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA37B4151EAAAFC50047E1DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		AAC1D6531EB01BC0009E0956 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */,
+				AAD3690E1EB0C2CF00DAC0D9 /* LoggerKit.framework in Embed Frameworks */,
+				AAB894B41EB15A7D00F155B0 /* FoundationKit.framework in Embed Frameworks */,
+				AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */,
+				AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA2614231EACE17E004E13E9 /* CXFNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFNode.swift; sourceTree = "<group>"; };
+		AA37B4171EAAAFC50047E1DD /* CollageTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CollageTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA37B41A1EAAAFC50047E1DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonKit.xcodeproj; path = ../CommonKit/CommonKit.xcodeproj; sourceTree = "<group>"; };
+		AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Commander.xcodeproj; path = ../Commander/Commander.xcodeproj; sourceTree = "<group>"; };
+		AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = ../SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
+		AA37B4401EACC1360047E1DD /* CXFCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFCollage.swift; sourceTree = "<group>"; };
+		AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
+		AAB894981EB1527B00F155B0 /* CollageViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollageViewer.entitlements; sourceTree = "<group>"; };
+		AAC1D6271EB0144B009E0956 /* CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
+		AAC1D62D1EB01935009E0956 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		AAC1D6331EB01BA7009E0956 /* CollageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFCollageViewController.swift; sourceTree = "<group>"; };
+		AAC1D6391EB01BA7009E0956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC1D63C1EB01BA7009E0956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAC1D63E1EB01BA7009E0956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC1D6471EB01BC0009E0956 /* CollageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC1D64A1EB01BC0009E0956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = CollageTool.py; sourceTree = "<group>"; };
+		AAD369451EB0EBE500DAC0D9 /* CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
+		AAD369551EB101A800DAC0D9 /* CXFDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFDocument.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA37B4141EAAAFC50047E1DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB894B21EB15A7900F155B0 /* FoundationKit.framework in Frameworks */,
+				AAD3690B1EB0C2BA00DAC0D9 /* Commander.framework in Frameworks */,
+				AAD369081EB0C2B800DAC0D9 /* LoggerKit.framework in Frameworks */,
+				AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC1D6301EB01BA7009E0956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC1D64E1EB01BC0009E0956 /* CollageKit.framework in Frameworks */,
+				AAD3690D1EB0C2CF00DAC0D9 /* LoggerKit.framework in Frameworks */,
+				AAB894B31EB15A7D00F155B0 /* FoundationKit.framework in Frameworks */,
+				AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */,
+				AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC1D6431EB01BC0009E0956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB894B01EB15A7200F155B0 /* FoundationKit.framework in Frameworks */,
+				AAD369261EB0D0D700DAC0D9 /* LoggerKit.framework in Frameworks */,
+				AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA37B40E1EAAAFC50047E1DD = {
+			isa = PBXGroup;
+			children = (
+				AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */,
+				AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */,
+				AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */,
+				AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */,
+				AAC1D6481EB01BC0009E0956 /* CollageKit */,
+				AA37B4191EAAAFC50047E1DD /* CollageTool */,
+				AAC1D6341EB01BA7009E0956 /* CollageViewer */,
+				AA37B4181EAAAFC50047E1DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA37B4181EAAAFC50047E1DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA37B4171EAAAFC50047E1DD /* CollageTool */,
+				AAC1D6331EB01BA7009E0956 /* CollageViewer.app */,
+				AAC1D6471EB01BC0009E0956 /* CollageKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA37B4191EAAAFC50047E1DD /* CollageTool */ = {
+			isa = PBXGroup;
+			children = (
+				AA37B41A1EAAAFC50047E1DD /* main.swift */,
+			);
+			path = CollageTool;
+			sourceTree = "<group>";
+		};
+		AA50B6401EB2271900F5F6F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC1D6341EB01BA7009E0956 /* CollageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */,
+				AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */,
+				AAD369551EB101A800DAC0D9 /* CXFDocument.swift */,
+				AAC1D6391EB01BA7009E0956 /* Assets.xcassets */,
+				AAC1D63B1EB01BA7009E0956 /* Main.storyboard */,
+				AAC1D63E1EB01BA7009E0956 /* Info.plist */,
+				AAB894981EB1527B00F155B0 /* CollageViewer.entitlements */,
+			);
+			path = CollageViewer;
+			sourceTree = "<group>";
+		};
+		AAC1D6481EB01BC0009E0956 /* CollageKit */ = {
+			isa = PBXGroup;
+			children = (
+				AA37B4401EACC1360047E1DD /* CXFCollage.swift */,
+				AA2614231EACE17E004E13E9 /* CXFNode.swift */,
+				AAD369451EB0EBE500DAC0D9 /* CGColor.swift */,
+				AAC1D62D1EB01935009E0956 /* CGSize.swift */,
+				AAC1D6271EB0144B009E0956 /* CGImage.swift */,
+				AAC1D64A1EB01BC0009E0956 /* Info.plist */,
+				AAD368EE1EB0C24A00DAC0D9 /* Python */,
+			);
+			path = CollageKit;
+			sourceTree = "<group>";
+		};
+		AAD368EE1EB0C24A00DAC0D9 /* Python */ = {
+			isa = PBXGroup;
+			children = (
+				AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */,
+			);
+			path = Python;
+			sourceTree = "<group>";
+		};
+		AAD368F11EB0C25B00DAC0D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAD368F61EB0C26600DAC0D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAD368FA1EB0C26600DAC0D9 /* Commander.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAD368FB1EB0C27100DAC0D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */,
+				AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AAC1D6441EB01BC0009E0956 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AA37B4161EAAAFC50047E1DD /* CollageTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA37B41E1EAAAFC50047E1DD /* Build configuration list for PBXNativeTarget "CollageTool" */;
+			buildPhases = (
+				AA37B4131EAAAFC50047E1DD /* Sources */,
+				AA37B4141EAAAFC50047E1DD /* Frameworks */,
+				AA37B4151EAAAFC50047E1DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollageTool;
+			productName = CollageTool;
+			productReference = AA37B4171EAAAFC50047E1DD /* CollageTool */;
+			productType = "com.apple.product-type.tool";
+		};
+		AAC1D6321EB01BA7009E0956 /* CollageViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC1D63F1EB01BA7009E0956 /* Build configuration list for PBXNativeTarget "CollageViewer" */;
+			buildPhases = (
+				AAC1D62F1EB01BA7009E0956 /* Sources */,
+				AAC1D6301EB01BA7009E0956 /* Frameworks */,
+				AAC1D6311EB01BA7009E0956 /* Resources */,
+				AAC1D6531EB01BC0009E0956 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAC1D64D1EB01BC0009E0956 /* PBXTargetDependency */,
+				AAD369101EB0C2CF00DAC0D9 /* PBXTargetDependency */,
+				AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */,
+				AAB894B61EB15A7D00F155B0 /* PBXTargetDependency */,
+				AA50B6491EB2272200F5F6F4 /* PBXTargetDependency */,
+			);
+			name = CollageViewer;
+			productName = CollageViewer;
+			productReference = AAC1D6331EB01BA7009E0956 /* CollageViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAC1D6461EB01BC0009E0956 /* CollageKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC1D6501EB01BC0009E0956 /* Build configuration list for PBXNativeTarget "CollageKit" */;
+			buildPhases = (
+				AAC1D6421EB01BC0009E0956 /* Sources */,
+				AAC1D6431EB01BC0009E0956 /* Frameworks */,
+				AAC1D6441EB01BC0009E0956 /* Headers */,
+				AAC1D6451EB01BC0009E0956 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollageKit;
+			productName = CollageKit;
+			productReference = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA37B40F1EAAAFC50047E1DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CXF;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Pedro José Pereira Vieito";
+				TargetAttributes = {
+					AA37B4161EAAAFC50047E1DD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T7MC635YG5;
+						ProvisioningStyle = Automatic;
+					};
+					AAC1D6321EB01BA7009E0956 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T7MC635YG5;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					AAC1D6461EB01BC0009E0956 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T7MC635YG5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AA37B4121EAAAFC50047E1DD /* Build configuration list for PBXProject "CollageTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA37B40E1EAAAFC50047E1DD;
+			productRefGroup = AA37B4181EAAAFC50047E1DD /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AAD368F61EB0C26600DAC0D9 /* Products */;
+					ProjectRef = AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */;
+				},
+				{
+					ProductGroup = AAD368FB1EB0C27100DAC0D9 /* Products */;
+					ProjectRef = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+				},
+				{
+					ProductGroup = AA50B6401EB2271900F5F6F4 /* Products */;
+					ProjectRef = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
+				},
+				{
+					ProductGroup = AAD368F11EB0C25B00DAC0D9 /* Products */;
+					ProjectRef = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				AA37B4161EAAAFC50047E1DD /* CollageTool */,
+				AAC1D6321EB01BA7009E0956 /* CollageViewer */,
+				AAC1D6461EB01BC0009E0956 /* CollageKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SandboxKit.framework;
+			remoteRef = AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = AAD368F41EB0C25B00DAC0D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AAD368FA1EB0C26600DAC0D9 /* Commander.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Commander.framework;
+			remoteRef = AAD368F91EB0C26600DAC0D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoundationKit.framework;
+			remoteRef = AAD368FF1EB0C27100DAC0D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoggerKit.framework;
+			remoteRef = AAD369011EB0C27100DAC0D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC1D6311EB01BA7009E0956 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC1D63A1EB01BA7009E0956 /* Assets.xcassets in Resources */,
+				AAC1D63D1EB01BA7009E0956 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC1D6451EB01BC0009E0956 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA37B4131EAAAFC50047E1DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC1D62F1EB01BA7009E0956 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */,
+				AAC1D6381EB01BA7009E0956 /* CXFCollageViewController.swift in Sources */,
+				AAC1D6361EB01BA7009E0956 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC1D6421EB01BC0009E0956 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC1D6541EB01BD1009E0956 /* CXFCollage.swift in Sources */,
+				AAC1D6571EB01BD1009E0956 /* CGImage.swift in Sources */,
+				AAD369461EB0EBE500DAC0D9 /* CGColor.swift in Sources */,
+				AAC1D6561EB01BD1009E0956 /* CGSize.swift in Sources */,
+				AAC1D6551EB01BD1009E0956 /* CXFNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA50B6491EB2272200F5F6F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SandboxKit;
+			targetProxy = AA50B6481EB2272200F5F6F4 /* PBXContainerItemProxy */;
+		};
+		AAB894B61EB15A7D00F155B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoundationKit;
+			targetProxy = AAB894B51EB15A7D00F155B0 /* PBXContainerItemProxy */;
+		};
+		AAC1D64D1EB01BC0009E0956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAC1D6461EB01BC0009E0956 /* CollageKit */;
+			targetProxy = AAC1D64C1EB01BC0009E0956 /* PBXContainerItemProxy */;
+		};
+		AAD369101EB0C2CF00DAC0D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoggerKit;
+			targetProxy = AAD3690F1EB0C2CF00DAC0D9 /* PBXContainerItemProxy */;
+		};
+		AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWXMLHash;
+			targetProxy = AAD369131EB0C2CF00DAC0D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAC1D63B1EB01BA7009E0956 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC1D63C1EB01BA7009E0956 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA37B41C1EAAAFC50047E1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA37B41D1EAAAFC50047E1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AA37B41F1EAAAFC50047E1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AA37B4201EAAAFC50047E1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AAC1D6401EB01BA7009E0956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CollageViewer/CollageViewer.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CollageViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AAC1D6411EB01BA7009E0956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CollageViewer/CollageViewer.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CollageViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AAC1D6511EB01BC0009E0956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CollageKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AAC1D6521EB01BC0009E0956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CollageKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA37B4121EAAAFC50047E1DD /* Build configuration list for PBXProject "CollageTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA37B41C1EAAAFC50047E1DD /* Debug */,
+				AA37B41D1EAAAFC50047E1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA37B41E1EAAAFC50047E1DD /* Build configuration list for PBXNativeTarget "CollageTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA37B41F1EAAAFC50047E1DD /* Debug */,
+				AA37B4201EAAAFC50047E1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC1D63F1EB01BA7009E0956 /* Build configuration list for PBXNativeTarget "CollageViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC1D6401EB01BA7009E0956 /* Debug */,
+				AAC1D6411EB01BA7009E0956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC1D6501EB01BC0009E0956 /* Build configuration list for PBXNativeTarget "CollageKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC1D6511EB01BC0009E0956 /* Debug */,
+				AAC1D6521EB01BC0009E0956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA37B40F1EAAAFC50047E1DD /* Project object */;
+}
