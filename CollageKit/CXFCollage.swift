@@ -122,7 +122,7 @@ public class CXFCollage {
     ///
     /// - Parameter completionHandler: Called when the rendering has finished.
     public func render(completionHandler: @escaping (CGImage?) -> ()) {
-        DispatchQueue(label: "com.pvieito.CXFCollage").async {
+        DispatchQueue(label: "com.pvieito.CollageKit.CXFCollage.collageRendering").async {
             self.render()
 
             DispatchQueue.main.async {
