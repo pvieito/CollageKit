@@ -46,7 +46,7 @@ class CXFCollageViewController: NSViewController, NSWindowDelegate {
 
                 if let window = self.view.window {
                     let alert = NSAlert()
-                    alert.messageText = "Collage photos not accessible."
+                    alert.messageText = "Collage photos not accessible"
                     alert.informativeText = "Collage photos are stored in \(imagesDirectoryURL.path)."
                     alert.addButton(withTitle: "OK")
                     alert.beginSheetModal(for: window, completionHandler: { (response) in
