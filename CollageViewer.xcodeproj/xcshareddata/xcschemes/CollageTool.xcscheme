@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAC1D6321EB01BA7009E0956"
-               BuildableName = "CollageViewer.app"
-               BlueprintName = "CollageViewer"
-               ReferencedContainer = "container:CollageTool.xcodeproj">
+               BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
+               BuildableName = "CollageTool"
+               BlueprintName = "CollageTool"
+               ReferencedContainer = "container:CollageViewer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAC1D6321EB01BA7009E0956"
-            BuildableName = "CollageViewer.app"
-            BlueprintName = "CollageViewer"
-            ReferencedContainer = "container:CollageTool.xcodeproj">
+            BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
+            BuildableName = "CollageTool"
+            BlueprintName = "CollageTool"
+            ReferencedContainer = "container:CollageViewer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAC1D6321EB01BA7009E0956"
-            BuildableName = "CollageViewer.app"
-            BlueprintName = "CollageViewer"
-            ReferencedContainer = "container:CollageTool.xcodeproj">
+            BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
+            BuildableName = "CollageTool"
+            BlueprintName = "CollageTool"
+            ReferencedContainer = "container:CollageViewer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAC1D6321EB01BA7009E0956"
-            BuildableName = "CollageViewer.app"
-            BlueprintName = "CollageViewer"
-            ReferencedContainer = "container:CollageTool.xcodeproj">
+            BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
+            BuildableName = "CollageTool"
+            BlueprintName = "CollageTool"
+            ReferencedContainer = "container:CollageViewer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

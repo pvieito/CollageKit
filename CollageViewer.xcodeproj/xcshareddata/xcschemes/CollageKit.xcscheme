@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
-               BuildableName = "CollageTool"
-               BlueprintName = "CollageTool"
-               ReferencedContainer = "container:CollageTool.xcodeproj">
+               BlueprintIdentifier = "AAC1D6461EB01BC0009E0956"
+               BuildableName = "CollageKit.framework"
+               BlueprintName = "CollageKit"
+               ReferencedContainer = "container:CollageViewer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
-            BuildableName = "CollageTool"
-            BlueprintName = "CollageTool"
-            ReferencedContainer = "container:CollageTool.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,30 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
-            BuildableName = "CollageTool"
-            BlueprintName = "CollageTool"
-            ReferencedContainer = "container:CollageTool.xcodeproj">
+            BlueprintIdentifier = "AAC1D6461EB01BC0009E0956"
+            BuildableName = "CollageKit.framework"
+            BlueprintName = "CollageKit"
+            ReferencedContainer = "container:CollageViewer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "/Users/pvieito/Pictures/Collages/Patricia\ Pereira\ Lores.cxf"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "/Users/pvieito/Pictures/Collages/Familia.cxf"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "-v"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -84,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA37B4161EAAAFC50047E1DD"
-            BuildableName = "CollageTool"
-            BlueprintName = "CollageTool"
-            ReferencedContainer = "container:CollageTool.xcodeproj">
+            BlueprintIdentifier = "AAC1D6461EB01BC0009E0956"
+            BuildableName = "CollageKit.framework"
+            BlueprintName = "CollageKit"
+            ReferencedContainer = "container:CollageViewer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
