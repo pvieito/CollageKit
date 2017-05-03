@@ -139,6 +139,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA03CB161EB6B96B00004AB5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA2614231EACE17E004E13E9 /* CXFNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFNode.swift; sourceTree = "<group>"; };
 		AA37B4171EAAAFC50047E1DD /* CollageTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CollageTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37B41A1EAAAFC50047E1DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -228,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				AA37B41A1EAAAFC50047E1DD /* main.swift */,
+				AA03CB161EB6B96B00004AB5 /* Info.plist */,
 			);
 			path = CollageTool;
 			sourceTree = "<group>";
@@ -670,9 +672,12 @@
 		AA37B41F1EAAAFC50047E1DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
+				INFOPLIST_FILE = "$(SRCROOT)/CollageTool/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx";
 				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -681,9 +686,12 @@
 		AA37B4201EAAAFC50047E1DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
+				INFOPLIST_FILE = "$(SRCROOT)/CollageTool/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx";
 				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

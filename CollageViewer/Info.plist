@@ -57,7 +57,7 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>NSSupportsSuddenTermination</key>
+	<key>NSSupportsAutomaticTermination</key>
 	<string>YES</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
