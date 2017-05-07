@@ -10,10 +10,13 @@
 		AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B41A1EAAAFC50047E1DD /* main.swift */; };
 		AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; };
 		AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAB894B01EB15A7200F155B0 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; };
-		AAB894B21EB15A7900F155B0 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; };
-		AAB894B31EB15A7D00F155B0 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; };
-		AAB894B41EB15A7D00F155B0 /* FoundationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
+		AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
+		AAB7107B1EBFC5120087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
+		AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAB7107F1EBFC5120087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
+		AAB710801EBFC5120087A8EF /* LoggerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAB710831EBFC5170087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
 		AAC1D6361EB01BA7009E0956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */; };
 		AAC1D6381EB01BA7009E0956 /* CXFCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */; };
 		AAC1D63A1EB01BA7009E0956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC1D6391EB01BA7009E0956 /* Assets.xcassets */; };
@@ -26,14 +29,10 @@
 		AAC1D6571EB01BD1009E0956 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6271EB0144B009E0956 /* CGImage.swift */; };
 		AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
 		AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */ = {isa = PBXBuildFile; fileRef = AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */; };
-		AAD369081EB0C2B800DAC0D9 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; };
 		AAD3690B1EB0C2BA00DAC0D9 /* Commander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368FA1EB0C26600DAC0D9 /* Commander.framework */; };
 		AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
-		AAD3690D1EB0C2CF00DAC0D9 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; };
-		AAD3690E1EB0C2CF00DAC0D9 /* LoggerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
 		AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAD369261EB0D0D700DAC0D9 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */; };
 		AAD369461EB0EBE500DAC0D9 /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369451EB0EBE500DAC0D9 /* CGColor.swift */; };
 		AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369551EB101A800DAC0D9 /* CXFDocument.swift */; };
 /* End PBXBuildFile section */
@@ -53,12 +52,33 @@
 			remoteGlobalIDString = AA50B60A1EB21C4F00F5F6F4;
 			remoteInfo = SandboxKit;
 		};
-		AAB894B51EB15A7D00F155B0 /* PBXContainerItemProxy */ = {
+		AAB710711EBFC4D30087A8EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+			containerPortal = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AABBD9A41E5761BD00AE5B46;
+			remoteInfo = LoggerKit;
+		};
+		AAB710781EBFC5010087A8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA2563CF1E57639E0037CBED;
+			remoteInfo = FoundationKit;
+		};
+		AAB7107D1EBFC5120087A8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AA2563C41E57639E0037CBED;
 			remoteInfo = FoundationKit;
+		};
+		AAB710811EBFC5120087A8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AABBD99C1E5761BD00AE5B46;
+			remoteInfo = LoggerKit;
 		};
 		AAC1D64C1EB01BC0009E0956 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -80,27 +100,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = OBJ_39;
 			remoteInfo = Commander;
-		};
-		AAD368FF1EB0C27100DAC0D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AA2563CF1E57639E0037CBED;
-			remoteInfo = FoundationKit;
-		};
-		AAD369011EB0C27100DAC0D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AABBD9A41E5761BD00AE5B46;
-			remoteInfo = LoggerKit;
-		};
-		AAD3690F1EB0C2CF00DAC0D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AABBD99C1E5761BD00AE5B46;
-			remoteInfo = LoggerKit;
 		};
 		AAD369131EB0C2CF00DAC0D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -127,10 +126,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AAB710801EBFC5120087A8EF /* LoggerKit.framework in Embed Frameworks */,
 				AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */,
-				AAD3690E1EB0C2CF00DAC0D9 /* LoggerKit.framework in Embed Frameworks */,
-				AAB894B41EB15A7D00F155B0 /* FoundationKit.framework in Embed Frameworks */,
 				AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */,
+				AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */,
 				AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -143,11 +142,12 @@
 		AA2614231EACE17E004E13E9 /* CXFNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFNode.swift; sourceTree = "<group>"; };
 		AA37B4171EAAAFC50047E1DD /* CollageTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CollageTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37B41A1EAAAFC50047E1DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonKit.xcodeproj; path = ../CommonKit/CommonKit.xcodeproj; sourceTree = "<group>"; };
 		AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Commander.xcodeproj; path = ../Commander/Commander.xcodeproj; sourceTree = "<group>"; };
 		AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = ../SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		AA37B4401EACC1360047E1DD /* CXFCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFCollage.swift; sourceTree = "<group>"; };
 		AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
+		AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoggerKit.xcodeproj; path = ../LoggerKit/LoggerKit.xcodeproj; sourceTree = "<group>"; };
+		AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoundationKit.xcodeproj; path = ../FoundationKit/FoundationKit.xcodeproj; sourceTree = "<group>"; };
 		AAB894981EB1527B00F155B0 /* CollageViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollageViewer.entitlements; sourceTree = "<group>"; };
 		AAC1D6271EB0144B009E0956 /* CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
 		AAC1D62D1EB01935009E0956 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
@@ -169,9 +169,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAB894B21EB15A7900F155B0 /* FoundationKit.framework in Frameworks */,
+				AAB710831EBFC5170087A8EF /* LoggerKit.framework in Frameworks */,
 				AAD3690B1EB0C2BA00DAC0D9 /* Commander.framework in Frameworks */,
-				AAD369081EB0C2B800DAC0D9 /* LoggerKit.framework in Frameworks */,
 				AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,10 +179,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB7107F1EBFC5120087A8EF /* LoggerKit.framework in Frameworks */,
 				AAC1D64E1EB01BC0009E0956 /* CollageKit.framework in Frameworks */,
-				AAD3690D1EB0C2CF00DAC0D9 /* LoggerKit.framework in Frameworks */,
-				AAB894B31EB15A7D00F155B0 /* FoundationKit.framework in Frameworks */,
 				AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */,
+				AAB7107B1EBFC5120087A8EF /* FoundationKit.framework in Frameworks */,
 				AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,8 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAB894B01EB15A7200F155B0 /* FoundationKit.framework in Frameworks */,
-				AAD369261EB0D0D700DAC0D9 /* LoggerKit.framework in Frameworks */,
+				AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */,
+				AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */,
 				AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,8 +203,9 @@
 		AA37B40E1EAAAFC50047E1DD = {
 			isa = PBXGroup;
 			children = (
+				AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */,
+				AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */,
 				AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */,
-				AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */,
 				AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */,
 				AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */,
 				AAC1D6481EB01BC0009E0956 /* CollageKit */,
@@ -238,6 +238,22 @@
 			isa = PBXGroup;
 			children = (
 				AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAB7106E1EBFC4D30087A8EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAB710721EBFC4D30087A8EF /* LoggerKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAB710751EBFC5010087A8EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAB710791EBFC5010087A8EF /* FoundationKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,15 +310,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAD368FB1EB0C27100DAC0D9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */,
-				AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -346,10 +353,10 @@
 			);
 			dependencies = (
 				AAC1D64D1EB01BC0009E0956 /* PBXTargetDependency */,
-				AAD369101EB0C2CF00DAC0D9 /* PBXTargetDependency */,
 				AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */,
-				AAB894B61EB15A7D00F155B0 /* PBXTargetDependency */,
 				AA50B6491EB2272200F5F6F4 /* PBXTargetDependency */,
+				AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */,
+				AAB710821EBFC5120087A8EF /* PBXTargetDependency */,
 			);
 			name = CollageViewer;
 			productName = CollageViewer;
@@ -410,7 +417,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA37B4121EAAAFC50047E1DD /* Build configuration list for PBXProject "CollageTool" */;
+			buildConfigurationList = AA37B4121EAAAFC50047E1DD /* Build configuration list for PBXProject "CollageViewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -427,8 +434,12 @@
 					ProjectRef = AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */;
 				},
 				{
-					ProductGroup = AAD368FB1EB0C27100DAC0D9 /* Products */;
-					ProjectRef = AA37B4221EAAB20B0047E1DD /* CommonKit.xcodeproj */;
+					ProductGroup = AAB710751EBFC5010087A8EF /* Products */;
+					ProjectRef = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
+				},
+				{
+					ProductGroup = AAB7106E1EBFC4D30087A8EF /* Products */;
+					ProjectRef = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
 				},
 				{
 					ProductGroup = AA50B6401EB2271900F5F6F4 /* Products */;
@@ -456,6 +467,20 @@
 			remoteRef = AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		AAB710721EBFC4D30087A8EF /* LoggerKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoggerKit.framework;
+			remoteRef = AAB710711EBFC4D30087A8EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AAB710791EBFC5010087A8EF /* FoundationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoundationKit.framework;
+			remoteRef = AAB710781EBFC5010087A8EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -468,20 +493,6 @@
 			fileType = wrapper.framework;
 			path = Commander.framework;
 			remoteRef = AAD368F91EB0C26600DAC0D9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AAD369001EB0C27100DAC0D9 /* FoundationKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FoundationKit.framework;
-			remoteRef = AAD368FF1EB0C27100DAC0D9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AAD369021EB0C27100DAC0D9 /* LoggerKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LoggerKit.framework;
-			remoteRef = AAD369011EB0C27100DAC0D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -545,20 +556,20 @@
 			name = SandboxKit;
 			targetProxy = AA50B6481EB2272200F5F6F4 /* PBXContainerItemProxy */;
 		};
-		AAB894B61EB15A7D00F155B0 /* PBXTargetDependency */ = {
+		AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FoundationKit;
-			targetProxy = AAB894B51EB15A7D00F155B0 /* PBXContainerItemProxy */;
+			targetProxy = AAB7107D1EBFC5120087A8EF /* PBXContainerItemProxy */;
+		};
+		AAB710821EBFC5120087A8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoggerKit;
+			targetProxy = AAB710811EBFC5120087A8EF /* PBXContainerItemProxy */;
 		};
 		AAC1D64D1EB01BC0009E0956 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AAC1D6461EB01BC0009E0956 /* CollageKit */;
 			targetProxy = AAC1D64C1EB01BC0009E0956 /* PBXContainerItemProxy */;
-		};
-		AAD369101EB0C2CF00DAC0D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LoggerKit;
-			targetProxy = AAD3690F1EB0C2CF00DAC0D9 /* PBXContainerItemProxy */;
 		};
 		AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -788,7 +799,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA37B4121EAAAFC50047E1DD /* Build configuration list for PBXProject "CollageTool" */ = {
+		AA37B4121EAAAFC50047E1DD /* Build configuration list for PBXProject "CollageViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA37B41C1EAAAFC50047E1DD /* Debug */,
