@@ -9,40 +9,52 @@
 import Cocoa
 import CoreGraphics
 import LoggerKit
-import Commander
+import CommandLineKit
 import CollageKit
 
-Logger.logMode = .commandLine
+let collagesOption = MultiStringOption(shortFlag: "i", longFlag: "input", required: true, helpMessage: "Input collage files (.cxf extension).")
+let verboseOption = BoolOption(shortFlag: "v", longFlag: "verbose", helpMessage: "Verbose Mode.")
+let helpOption = BoolOption(shortFlag: "h", longFlag: "help", helpMessage: "Prints a help message.")
 
-let filesArgument = VariadicArgument<String>("collage")
-let verboseFlag = Flag("verbose", flag: "v", description: "Verbose Mode", default: false)
+let cli = CommandLineKit.CommandLine()
+cli.addOptions(collagesOption, verboseOption, helpOption)
 
-let main = command(filesArgument, verboseFlag) { collagePaths, verbose in
-
-    Logger.logLevel = verbose ? .debug : .info
-
-    guard collagePaths.count > 0 else {
-        Logger.log(error: "No input files specified.")
-        exit(-1)
-    }
-
-    for collagePath in collagePaths {
-        if let collage = CXFCollage(contentsOf: collagePath) {
-            Logger.log(important: collage.name)
-            Logger.log(info: "Title: \(collage.albumTitle)")
-            Logger.log(info: "Date: \(collage.albumDate)")
-            Logger.log(info: "Size: \(collage.size)")
-
-            collage.render()
-
-            if let imageURL = collage.saveImageTemporary() {
-                NSWorkspace.shared().open(imageURL)
-            }
-        }
-        else {
-            Logger.log(error: "No collage file found at \(collagePath).")
-        }
-    }
+do {
+    try cli.parse()
+}
+catch {
+    cli.printUsage(error)
+    exit(EX_USAGE)
 }
 
-main.run()
+if helpOption.value {
+    cli.printUsage()
+    exit(0)
+}
+
+Logger.logMode = .commandLine
+Logger.logLevel = verboseOption.value ? .debug : .info
+
+
+guard let collagePaths = collagesOption.value, collagePaths.count > 0 else {
+    Logger.log(error: "No input files specified.")
+    exit(EX_USAGE)
+}
+
+for collagePath in collagePaths {
+    if let collage = CXFCollage(contentsOf: collagePath) {
+        Logger.log(important: collage.name)
+        Logger.log(info: "Title: \(collage.albumTitle)")
+        Logger.log(info: "Date: \(collage.albumDate)")
+        Logger.log(info: "Size: \(collage.size)")
+
+        collage.render()
+
+        if let imageURL = collage.saveImageTemporary() {
+            NSWorkspace.shared().open(imageURL)
+        }
+    }
+    else {
+        Logger.log(error: "No collage file found at \(collagePath).")
+    }
+}
