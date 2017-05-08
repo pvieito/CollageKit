@@ -10,6 +10,7 @@
 		AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B41A1EAAAFC50047E1DD /* main.swift */; };
 		AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; };
 		AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA539DFA1EBFE0AF00B885C1 /* Commander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA539DF71EBFE0AB00B885C1 /* Commander.framework */; };
 		AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
 		AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
 		AAB7107B1EBFC5120087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
@@ -29,7 +30,6 @@
 		AAC1D6571EB01BD1009E0956 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6271EB0144B009E0956 /* CGImage.swift */; };
 		AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
 		AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */ = {isa = PBXBuildFile; fileRef = AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */; };
-		AAD3690B1EB0C2BA00DAC0D9 /* Commander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368FA1EB0C26600DAC0D9 /* Commander.framework */; };
 		AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
 		AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
 		AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,6 +51,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA50B60A1EB21C4F00F5F6F4;
 			remoteInfo = SandboxKit;
+		};
+		AA539DF61EBFE0AB00B885C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA539DF11EBFE0AB00B885C1 /* Commander.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = OBJ_28;
+			remoteInfo = Commander;
+		};
+		AA539DF81EBFE0AB00B885C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA539DF11EBFE0AB00B885C1 /* Commander.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = OBJ_29;
+			remoteInfo = CommanderTests;
 		};
 		AAB710711EBFC4D30087A8EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -94,13 +108,6 @@
 			remoteGlobalIDString = CD9D052C1A757D8B003CCB21;
 			remoteInfo = SWXMLHash;
 		};
-		AAD368F91EB0C26600DAC0D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_39;
-			remoteInfo = Commander;
-		};
 		AAD369131EB0C2CF00DAC0D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
@@ -142,10 +149,10 @@
 		AA2614231EACE17E004E13E9 /* CXFNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFNode.swift; sourceTree = "<group>"; };
 		AA37B4171EAAAFC50047E1DD /* CollageTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CollageTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37B41A1EAAAFC50047E1DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Commander.xcodeproj; path = ../Commander/Commander.xcodeproj; sourceTree = "<group>"; };
 		AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = ../SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		AA37B4401EACC1360047E1DD /* CXFCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFCollage.swift; sourceTree = "<group>"; };
 		AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
+		AA539DF11EBFE0AB00B885C1 /* Commander.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Commander.xcodeproj; path = ../Commander/Commander.xcodeproj; sourceTree = "<group>"; };
 		AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoggerKit.xcodeproj; path = ../LoggerKit/LoggerKit.xcodeproj; sourceTree = "<group>"; };
 		AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoundationKit.xcodeproj; path = ../FoundationKit/FoundationKit.xcodeproj; sourceTree = "<group>"; };
 		AAB894981EB1527B00F155B0 /* CollageViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollageViewer.entitlements; sourceTree = "<group>"; };
@@ -169,8 +176,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA539DFA1EBFE0AF00B885C1 /* Commander.framework in Frameworks */,
 				AAB710831EBFC5170087A8EF /* LoggerKit.framework in Frameworks */,
-				AAD3690B1EB0C2BA00DAC0D9 /* Commander.framework in Frameworks */,
 				AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,10 +210,10 @@
 		AA37B40E1EAAAFC50047E1DD = {
 			isa = PBXGroup;
 			children = (
+				AA539DF11EBFE0AB00B885C1 /* Commander.xcodeproj */,
 				AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */,
 				AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */,
 				AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */,
-				AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */,
 				AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */,
 				AAC1D6481EB01BC0009E0956 /* CollageKit */,
 				AA37B4191EAAAFC50047E1DD /* CollageTool */,
@@ -238,6 +245,15 @@
 			isa = PBXGroup;
 			children = (
 				AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA539DF21EBFE0AB00B885C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA539DF71EBFE0AB00B885C1 /* Commander.framework */,
+				AA539DF91EBFE0AB00B885C1 /* CommanderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,14 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AAD368F61EB0C26600DAC0D9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AAD368FA1EB0C26600DAC0D9 /* Commander.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,8 +438,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = AAD368F61EB0C26600DAC0D9 /* Products */;
-					ProjectRef = AA37B42B1EAAB2110047E1DD /* Commander.xcodeproj */;
+					ProductGroup = AA539DF21EBFE0AB00B885C1 /* Products */;
+					ProjectRef = AA539DF11EBFE0AB00B885C1 /* Commander.xcodeproj */;
 				},
 				{
 					ProductGroup = AAB710751EBFC5010087A8EF /* Products */;
@@ -467,6 +475,20 @@
 			remoteRef = AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		AA539DF71EBFE0AB00B885C1 /* Commander.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Commander.framework;
+			remoteRef = AA539DF61EBFE0AB00B885C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA539DF91EBFE0AB00B885C1 /* CommanderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = file;
+			path = CommanderTests.xctest;
+			remoteRef = AA539DF81EBFE0AB00B885C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		AAB710721EBFC4D30087A8EF /* LoggerKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -486,13 +508,6 @@
 			fileType = wrapper.framework;
 			path = SWXMLHash.framework;
 			remoteRef = AAD368F41EB0C25B00DAC0D9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AAD368FA1EB0C26600DAC0D9 /* Commander.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Commander.framework;
-			remoteRef = AAD368F91EB0C26600DAC0D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
