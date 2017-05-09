@@ -20,7 +20,7 @@
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>CXF Collage File</string>
+			<string>Picasa Collage</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -48,7 +48,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>3</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
@@ -79,7 +79,7 @@
 				<string>public.xml</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>CXF Collage File</string>
+			<string>Picasa Collage</string>
 			<key>UTTypeIconFile</key>
 			<string>CollageFile</string>
 			<key>UTTypeIdentifier</key>

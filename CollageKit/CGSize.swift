@@ -25,4 +25,20 @@ extension CGSize: CustomStringConvertible {
     internal var ratio: CGFloat {
         return CGFloat(self.width / self.height)
     }
+
+    internal var max: CGFloat {
+        return [self.width, self.height].max() ?? self.width
+    }
+
+    internal var min: CGFloat {
+        return [self.width, self.height].min() ?? self.height
+    }
+
+    internal var portrait: CGSize {
+        return CGSize(width: self.min, height: self.max)
+    }
+
+    internal var landscape: CGSize {
+        return CGSize(width: self.max, height: self.min)
+    }
 }

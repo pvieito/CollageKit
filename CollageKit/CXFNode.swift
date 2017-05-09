@@ -13,6 +13,20 @@ import LoggerKit
 
 class CXFNode {
 
+    public enum NodeError: LocalizedError {
+        case missingImagePath
+        case missingAttribute(String)
+
+        public var errorDescription: String? {
+            switch self {
+            case .missingImagePath:
+                return "Node misses the image path."
+            case .missingAttribute(let attributeName):
+                return "Node misses the required “\(attributeName)” attribute."
+            }
+        }
+    }
+
     private let nodeXML: XMLIndexer
     private let collage: CXFCollage
 
@@ -24,45 +38,49 @@ class CXFNode {
 
     internal let imageURL: URL
 
-    internal init?(element: XMLIndexer, collage: CXFCollage) {
+    internal init(element: XMLIndexer, collage: CXFCollage) throws {
         self.nodeXML = element
         self.collage = collage
 
-        guard let xString = nodeXML.element?.attribute(by: "x")?.text, let x = Double(xString) else {
-            return nil
-        }
-
-        guard let yString = nodeXML.element?.attribute(by: "y")?.text, let y = Double(yString) else {
-            return nil
-        }
-
-        guard let widthString = nodeXML.element?.attribute(by: "w")?.text, let width = Double(widthString) else {
-            return nil
-        }
-
-        guard let heightString = nodeXML.element?.attribute(by: "h")?.text, let height = Double(heightString) else {
-            return nil
-        }
-
-        self.proportionalRect = CGRect(x: x, y: y, width: width, height: height)
-
-        guard let thetaString = nodeXML.element?.attribute(by: "theta")?.text, let theta = Double(thetaString) else {
-            return nil
-        }
-
-        self.theta = CGFloat(theta)
-
-        guard let scaleString = nodeXML.element?.attribute(by: "scale")?.text, let scale = Double(scaleString) else {
-            return nil
-        }
-
-        self.scale = CGFloat(scale)
-
         guard let imagePath = nodeXML["src"].element?.text else {
-            return nil
+            throw NodeError.missingImagePath
         }
 
         self.imageURL = collage.imageURL(from: imagePath)
+        Logger.log(debug: "Loading node “\(imageURL.lastPathComponent)”...")
+
+        guard let xString = nodeXML.element?.attribute(by: "x")?.text, let x = Double(xString) else {
+            throw NodeError.missingAttribute("x")
+        }
+
+        guard let yString = nodeXML.element?.attribute(by: "y")?.text, let y = Double(yString) else {
+            throw NodeError.missingAttribute("x")
+        }
+
+        guard let widthString = nodeXML.element?.attribute(by: "w")?.text, let width = Double(widthString) else {
+            throw NodeError.missingAttribute("w")
+        }
+
+        guard let heightString = nodeXML.element?.attribute(by: "h")?.text, let height = Double(heightString) else {
+            throw NodeError.missingAttribute("h")
+        }
+
+        self.proportionalRect = CGRect(x: x, y: y, width: width, height: height)
+        Logger.log(debug: "Node proportional area: \(self.proportionalRect)")
+
+        guard let thetaString = nodeXML.element?.attribute(by: "theta")?.text, let theta = Double(thetaString) else {
+            throw NodeError.missingAttribute("theta")
+        }
+
+        self.theta = CGFloat(theta)
+        Logger.log(debug: "Node angle: \(self.theta)")
+
+        guard let scaleString = nodeXML.element?.attribute(by: "scale")?.text, let scale = Double(scaleString) else {
+            throw NodeError.missingAttribute("scale")
+        }
+
+        self.scale = CGFloat(scale)
+        Logger.log(debug: "Node scale: \(self.scale)")
 
         let areaWidth = self.proportionalRect.width * (collage.size.width - collage.spacing) - collage.spacing
         let areaHeight = self.proportionalRect.height * (collage.size.height - collage.spacing) - collage.spacing
@@ -72,7 +90,8 @@ class CXFNode {
 
         let collageArea = CGRect(x: areaX, y: areaY, width: areaWidth, height: areaHeight)
 
-        Logger.log(debug: "Node \(imageURL.lastPathComponent) collage area: \(collageArea)")
+        Logger.log(debug: "Node collage area: \(collageArea)")
+        Logger.log(debug: "Node image path: \(imageURL.lastPathComponent)")
 
         self.collageArea = collageArea
     }

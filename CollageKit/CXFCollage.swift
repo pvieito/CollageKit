@@ -14,8 +14,9 @@ import FoundationKit
 
 public class CXFCollage {
 
-    public enum InputError: LocalizedError {
+    public enum CollageError: LocalizedError {
         case versionNotSupported(Int)
+        case collageThemeNotSupported(String)
         case missingAttribute(String)
         case malformedAttribute(String)
         case invalidGraphicContext
@@ -26,14 +27,44 @@ public class CXFCollage {
             case .invalidCollageFile:
                 return "Invalid collage file."
             case .versionNotSupported(let version):
-                return "Collage file has a format version not suported: \(version). Only version 2 is supported."
+                return "Collage file version “\(version)” not suported. Only version 2 is supported."
+            case .collageThemeNotSupported(let theme):
+                return "Collage theme “\(theme)” not suported."
             case .missingAttribute(let attributeName):
-                return "Collage file misses a required attribute: \(attributeName)."
+                return "Collage file misses the required “\(attributeName)” attribute."
             case .malformedAttribute(let attributeName):
-                return "Collage file has an unkown format for the \(attributeName) attribute."
+                return "Collage file has an unkown format for the “\(attributeName)” attribute."
             case .invalidGraphicContext:
                 return "Invalid Core Graphics context."
             }
+        }
+    }
+
+    internal enum Orientation: String {
+        case portrait
+        case landscape
+
+        func size(for format: CGSize) -> CGSize {
+
+            switch self {
+            case .portrait:
+                return format.portrait
+            case .landscape:
+                return format.landscape
+            }
+        }
+    }
+
+    internal enum Theme: String {
+        case picturepile
+        case framegrid
+        case picturegrid
+        case regulargrid
+        case contactsheet
+        case multiexp
+
+        var supported: Bool {
+            return ![.picturepile, .multiexp, .contactsheet].contains(self)
         }
     }
 
@@ -44,7 +75,10 @@ public class CXFCollage {
     private let shadows: Bool
     private let backgroundColor: CGColor
     private var backgroundImageURL: URL? = nil
+    private var nodes: [CXFNode] = []
 
+    internal let orientation: Orientation
+    internal let theme: Theme
     internal let spacing: CGFloat
 
     public var image: CGImage? = nil
@@ -79,36 +113,54 @@ public class CXFCollage {
         // Required Attributes
 
         guard let collageElement = self.collageXML.element else {
-            throw InputError.invalidCollageFile
+            throw CollageError.invalidCollageFile
         }
 
         guard let versionString = collageElement.attribute(by: "version")?.text, let version = Int(versionString) else {
-            throw InputError.missingAttribute("version")
+            throw CollageError.missingAttribute("version")
         }
 
-        Logger.log(debug: "Collage Format Version: \(version).")
+        Logger.log(debug: "Collage Format Version: \(version)")
 
         guard version == 2 else {
-            throw InputError.versionNotSupported(version)
+            throw CollageError.versionNotSupported(version)
         }
 
         self.version = version
 
+        guard let orientationString = collageElement.attribute(by: "orientation")?.text, let orientation = Orientation(rawValue: orientationString) else {
+            throw CollageError.malformedAttribute("orientation")
+        }
+
+        self.orientation = orientation
+        Logger.log(debug: "Collage Orientation: \(self.orientation)")
+
+        guard let themeString = collageElement.attribute(by: "theme")?.text, let theme = Theme(rawValue: themeString) else {
+            throw CollageError.malformedAttribute("theme")
+        }
+
+        guard theme.supported else {
+            throw CollageError.collageThemeNotSupported(theme.rawValue)
+        }
+
+        self.theme = theme
+        Logger.log(debug: "Collage Theme: \(self.theme)")
+
         guard let sizeString = collageElement.attribute(by: "format")?.text.components(separatedBy: ":") else {
-            throw InputError.missingAttribute("format")
+            throw CollageError.missingAttribute("format")
         }
 
         guard let widthString = sizeString.first, let heightString = sizeString.last, let widthInt = Double(widthString), let heightInt = Double(heightString) else {
-            throw InputError.malformedAttribute("format")
+            throw CollageError.malformedAttribute("format")
         }
 
         let collageRatio = CGSize(width: widthInt, height: heightInt).ratio
-        self.size = CGSize(ratio: collageRatio, width: width)
+        self.size = orientation.size(for: CGSize(ratio: collageRatio, width: width))
 
         Logger.log(debug: "Collage Size: \(self.size)")
 
         guard let context = CGContext(data: nil, width: Int(self.size.width), height: Int(self.size.height), bitsPerComponent: 8, bytesPerRow: 0, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue) else {
-            throw InputError.invalidGraphicContext
+            throw CollageError.invalidGraphicContext
         }
 
         self.context = context
@@ -128,12 +180,12 @@ public class CXFCollage {
 
         if let spacingString = collageXML["spacing"].element?.attribute(by: "value")?.text, let spacingInt = Double(spacingString) {
             let spacing = CGFloat(spacingInt)
-            self.spacing = (0.0978 * pow(spacing, 2) - 0.0145 * spacing + 0.0157) * self.size.width
+            self.spacing = (0.09 * self.size.max) * spacing
             Logger.log(debug: "Collage Spacing: \(spacingString) -> \(self.spacing)")
         }
         else {
             self.spacing = 0
-            Logger.log(debug: "Collage Spacing: Not specified.")
+            Logger.log(debug: "Collage Spacing: Not specified")
         }
 
         if let hexColorString = collageXML["background"].element?.attribute(by: "color")?.text, let hexColor = Int(hexColorString, radix: 16) {
@@ -142,7 +194,7 @@ public class CXFCollage {
         }
         else {
             self.backgroundColor = CGColor.white
-            Logger.log(debug: "Collage Background Color: Not specified.")
+            Logger.log(debug: "Collage Background Color: Not specified")
         }
 
         if let backgroundImagePath = collageXML["background"]["src"].element?.text {
@@ -151,7 +203,23 @@ public class CXFCollage {
             Logger.log(debug: "Collage Background: Image: \(backgroundImageURL.lastPathComponent).")
         }
         else {
-            Logger.log(debug: "Collage Background: Image: Not specified.")
+            Logger.log(debug: "Collage Background: Image: Not specified")
+        }
+
+        Logger.log(debug: "Parsing Nodes...")
+
+        for nodeXML in collageXML["node"].all {
+            do {
+                let node = try CXFNode(element: nodeXML, collage: self)
+                nodes.append(node)
+            }
+            catch {
+                Logger.log(warning: error.localizedDescription)
+            }
+        }
+
+        guard self.nodes.count > 0 else {
+            throw CollageError.invalidCollageFile
         }
 
         Logger.log(debug: "Collage parsed successfully.")
@@ -166,10 +234,12 @@ public class CXFCollage {
         self.context.fill(collageRect)
 
         if let backgroundImageURL = self.backgroundImageURL, let backgroundImage = CGImage.init(url: backgroundImageURL, croppingRatio: self.size) {
+            Logger.log(debug: "Drawing background image: \(backgroundImageURL.path)")
+
             self.context.draw(backgroundImage, in: collageRect)
         }
 
-        Logger.log(debug: "Filling background color: \(self.backgroundColor.components ?? [])")
+        Logger.log(debug: "Filling background color...")
 
         for node in self.nodes {
             if let image = node.image {
@@ -252,15 +322,11 @@ public class CXFCollage {
 
     // MARK: Private implementation.
 
-    private var nodes: [CXFNode] {
-        return collageXML["node"].all.map({ CXFNode(element: $0, collage: self) }).filter({ $0 != nil }) as? [CXFNode] ?? []
-    }
-
     internal func imageURL(from cxfPath: String) -> URL {
-        if cxfPath.hasPrefix("$"), let usersDirectoryURL = FileManager.default.urls(for: FileManager.SearchPathDirectory.userDirectory, in: FileManager.SearchPathDomainMask.allDomainsMask).first {
+        if cxfPath.hasPrefix("$"), let userPath = getpwuid(getuid()).pointee.pw_dir {
             let cxfPath = cxfPath.applyingRegularExpression(pattern: "^\\$(HomeDir\\/)?", sustitution: "")
-
-            let userHomeURL = usersDirectoryURL.appendingPathComponent(NSUserName())
+            
+            let userHomeURL = URL(fileURLWithPath: String(cString: userPath))
             return URL(fileURLWithPath: cxfPath, relativeTo: userHomeURL)
         }
         else {
