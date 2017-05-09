@@ -62,7 +62,7 @@ class CXFCollageViewController: NSViewController, NSWindowDelegate {
 
         self.imageView.isHidden = true
         self.activityIndicator.startAnimation(self)
-        self.view.window?.title = collage.albumTitle
+        self.view.window?.title = collage.albumTitle ?? "CollageViewer"
     }
 
     func renderCollage() {

@@ -11,6 +11,13 @@ import CoreGraphics
 
 extension CGColor {
 
+    internal static func `init`(argb: Int) -> CGColor {
+        return CGColor.init(red: CGFloat((argb >> 16) & 0xFF) / 255.0,
+                            green: CGFloat((argb >> 8) & 0xFF) / 255.0,
+                            blue: CGFloat((argb >> 0) & 0xFF) / 255.0,
+                            alpha: CGFloat((argb >> 24) & 0xFF) / 255.0)
+    }
+
     internal static func `init`(rgba: Int) -> CGColor {
         return CGColor.init(red: CGFloat((rgba >> 24) & 0xFF) / 255.0,
                   green: CGFloat((rgba >> 16) & 0xFF) / 255.0,

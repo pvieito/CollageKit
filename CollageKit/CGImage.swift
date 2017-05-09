@@ -10,6 +10,23 @@ import Foundation
 
 extension CGImage {
 
+    internal static func `init`(url: URL, croppingRatio: CGSize) -> CGImage? {
+
+        if !FileManager.default.isReadableFile(atPath: url.path) {
+            return nil
+        }
+
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else {
+            return nil
+        }
+
+        guard let image = CGImageSourceCreateImageAtIndex(source, 0, nil) else {
+            return nil
+        }
+
+        return image.cropping(ratio: croppingRatio)
+    }
+
     /// Crops the image with the given ratio at the center with the maximum width or height.
     ///
     /// - Parameter ratio: CGSize that specifies the crop ratio. Only the ratio is haved in account, not the size.

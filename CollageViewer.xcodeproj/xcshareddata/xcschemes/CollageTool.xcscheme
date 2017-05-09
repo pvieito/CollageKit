@@ -61,6 +61,12 @@
             ReferencedContainer = "container:CollageViewer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-i /Users/pvieito/Pictures/Picasa/Collages/ModelTopology.cxf"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

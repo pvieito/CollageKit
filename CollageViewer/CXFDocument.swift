@@ -8,6 +8,7 @@
 
 import Cocoa
 import CollageKit
+import LoggerKit
 
 class CXFDocument: NSDocument {
 
@@ -26,11 +27,15 @@ class CXFDocument: NSDocument {
     }
 
     override func read(from url: URL, ofType typeName: String) throws {
-        guard let collage = CXFCollage(contentsOf: url) else {
-            throw NSError(domain: "Not a collage file.", code: -1, userInfo: nil)
+        do {
+            self.collage = try CXFCollage(contentsOf: url)
         }
-
-        self.collage = collage
+        catch {
+            Logger.log(error: error.localizedDescription)
+            let alert = NSAlert(error: error)
+            alert.runModal()
+            throw error
+        }
     }
 
     override func saveAs(_ sender: Any?) {

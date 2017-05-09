@@ -42,10 +42,11 @@ guard let collagePaths = collagesOption.value, collagePaths.count > 0 else {
 }
 
 for collagePath in collagePaths {
-    if let collage = CXFCollage(contentsOf: collagePath) {
+    do {
+        let collage = try CXFCollage(contentsOf: collagePath)
         Logger.log(important: collage.name)
-        Logger.log(info: "Title: \(collage.albumTitle)")
-        Logger.log(info: "Date: \(collage.albumDate)")
+        Logger.log(info: "Title: \(collage.albumTitle ?? "--")")
+        Logger.log(info: "Date: \(collage.albumDate ?? "--")")
         Logger.log(info: "Size: \(collage.size)")
 
         collage.render()
@@ -54,7 +55,7 @@ for collagePath in collagePaths {
             NSWorkspace.shared().open(imageURL)
         }
     }
-    else {
-        Logger.log(error: "No collage file found at \(collagePath).")
+    catch {
+        Logger.log(error: error.localizedDescription)
     }
 }
