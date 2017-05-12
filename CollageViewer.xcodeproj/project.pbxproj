@@ -10,34 +10,39 @@
 		AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B41A1EAAAFC50047E1DD /* main.swift */; };
 		AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; };
 		AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA558B0A1EC292E90099A8B0 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
+		AA558B121EC293D60099A8B0 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
 		AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
 		AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
-		AAB7107B1EBFC5120087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
 		AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAB7107F1EBFC5120087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
 		AAB710801EBFC5120087A8EF /* LoggerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAB710831EBFC5170087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
 		AAC1D6361EB01BA7009E0956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */; };
-		AAC1D6381EB01BA7009E0956 /* CXFCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */; };
+		AAC1D6381EB01BA7009E0956 /* CXFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6371EB01BA7009E0956 /* CXFViewController.swift */; };
 		AAC1D63A1EB01BA7009E0956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC1D6391EB01BA7009E0956 /* Assets.xcassets */; };
 		AAC1D63D1EB01BA7009E0956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC1D63B1EB01BA7009E0956 /* Main.storyboard */; };
 		AAC1D64E1EB01BC0009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
 		AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAC1D6541EB01BD1009E0956 /* CXFCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B4401EACC1360047E1DD /* CXFCollage.swift */; };
 		AAC1D6551EB01BD1009E0956 /* CXFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2614231EACE17E004E13E9 /* CXFNode.swift */; };
-		AAC1D6561EB01BD1009E0956 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D62D1EB01935009E0956 /* CGSize.swift */; };
-		AAC1D6571EB01BD1009E0956 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D6271EB0144B009E0956 /* CGImage.swift */; };
 		AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
 		AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */ = {isa = PBXBuildFile; fileRef = AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */; };
 		AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
-		AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
 		AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAD369461EB0EBE500DAC0D9 /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369451EB0EBE500DAC0D9 /* CGColor.swift */; };
 		AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369551EB101A800DAC0D9 /* CXFDocument.swift */; };
 		AAFE81E61EC0997F008C01A3 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFE81E31EC0997A008C01A3 /* CommandLineKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AA1B47F71EC349A800E35BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA7D0E5D1EC299D9005036CE;
+			remoteInfo = CoreGraphicsWindows;
+		};
 		AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
@@ -51,6 +56,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA50B60A1EB21C4F00F5F6F4;
 			remoteInfo = SandboxKit;
+		};
+		AA558B041EC292B90099A8B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA558AED1EC28E3F0099A8B0;
+			remoteInfo = CoreGraphicsKit;
+		};
+		AA558B081EC292C30099A8B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AA558AEC1EC28E3F0099A8B0;
+			remoteInfo = CoreGraphicsKit;
 		};
 		AAB710711EBFC4D30087A8EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -136,6 +155,7 @@
 				AAB710801EBFC5120087A8EF /* LoggerKit.framework in Embed Frameworks */,
 				AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */,
 				AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */,
+				AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */,
 				AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */,
 				AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */,
 			);
@@ -152,21 +172,19 @@
 		AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = ../SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		AA37B4401EACC1360047E1DD /* CXFCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFCollage.swift; sourceTree = "<group>"; };
 		AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
+		AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreGraphicsKit.xcodeproj; path = ../CoreGraphicsKit/CoreGraphicsKit.xcodeproj; sourceTree = "<group>"; };
 		AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoggerKit.xcodeproj; path = ../LoggerKit/LoggerKit.xcodeproj; sourceTree = "<group>"; };
 		AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoundationKit.xcodeproj; path = ../FoundationKit/FoundationKit.xcodeproj; sourceTree = "<group>"; };
 		AAB894981EB1527B00F155B0 /* CollageViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollageViewer.entitlements; sourceTree = "<group>"; };
-		AAC1D6271EB0144B009E0956 /* CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
-		AAC1D62D1EB01935009E0956 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		AAC1D6331EB01BA7009E0956 /* CollageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFCollageViewController.swift; sourceTree = "<group>"; };
+		AAC1D6371EB01BA7009E0956 /* CXFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFViewController.swift; sourceTree = "<group>"; };
 		AAC1D6391EB01BA7009E0956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC1D63C1EB01BA7009E0956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAC1D63E1EB01BA7009E0956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC1D6471EB01BC0009E0956 /* CollageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC1D64A1EB01BC0009E0956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = CollageTool.py; sourceTree = "<group>"; };
-		AAD369451EB0EBE500DAC0D9 /* CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
 		AAD369551EB101A800DAC0D9 /* CXFDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFDocument.swift; sourceTree = "<group>"; };
 		AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommandLineKit.xcodeproj; path = ../CommandLineKit/CommandLineKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,10 +204,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA558B121EC293D60099A8B0 /* CoreGraphicsKit.framework in Frameworks */,
 				AAB7107F1EBFC5120087A8EF /* LoggerKit.framework in Frameworks */,
 				AAC1D64E1EB01BC0009E0956 /* CollageKit.framework in Frameworks */,
-				AAD369111EB0C2CF00DAC0D9 /* SWXMLHash.framework in Frameworks */,
-				AAB7107B1EBFC5120087A8EF /* FoundationKit.framework in Frameworks */,
 				AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA558B0A1EC292E90099A8B0 /* CoreGraphicsKit.framework in Frameworks */,
 				AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */,
 				AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */,
 				AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */,
@@ -211,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */,
+				AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */,
 				AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */,
 				AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */,
 				AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */,
@@ -249,6 +268,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AA558AFF1EC292B90099A8B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */,
+				AA1B47F81EC349A800E35BD0 /* CoreGraphicsWindows */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AAB7106E1EBFC4D30087A8EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,8 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				AAC1D6351EB01BA7009E0956 /* AppDelegate.swift */,
-				AAC1D6371EB01BA7009E0956 /* CXFCollageViewController.swift */,
 				AAD369551EB101A800DAC0D9 /* CXFDocument.swift */,
+				AAC1D6371EB01BA7009E0956 /* CXFViewController.swift */,
 				AAC1D6391EB01BA7009E0956 /* Assets.xcassets */,
 				AAC1D63B1EB01BA7009E0956 /* Main.storyboard */,
 				AAC1D63E1EB01BA7009E0956 /* Info.plist */,
@@ -284,9 +312,6 @@
 			children = (
 				AA37B4401EACC1360047E1DD /* CXFCollage.swift */,
 				AA2614231EACE17E004E13E9 /* CXFNode.swift */,
-				AAD369451EB0EBE500DAC0D9 /* CGColor.swift */,
-				AAC1D62D1EB01935009E0956 /* CGSize.swift */,
-				AAC1D6271EB0144B009E0956 /* CGImage.swift */,
 				AAC1D64A1EB01BC0009E0956 /* Info.plist */,
 				AAD368EE1EB0C24A00DAC0D9 /* Python */,
 			);
@@ -365,6 +390,7 @@
 				AA50B6491EB2272200F5F6F4 /* PBXTargetDependency */,
 				AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */,
 				AAB710821EBFC5120087A8EF /* PBXTargetDependency */,
+				AA558B091EC292C30099A8B0 /* PBXTargetDependency */,
 			);
 			name = CollageViewer;
 			productName = CollageViewer;
@@ -442,6 +468,10 @@
 					ProjectRef = AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */;
 				},
 				{
+					ProductGroup = AA558AFF1EC292B90099A8B0 /* Products */;
+					ProjectRef = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
+				},
+				{
 					ProductGroup = AAB710751EBFC5010087A8EF /* Products */;
 					ProjectRef = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
 				},
@@ -460,19 +490,33 @@
 			);
 			projectRoot = "";
 			targets = (
-				AA37B4161EAAAFC50047E1DD /* CollageTool */,
-				AAC1D6321EB01BA7009E0956 /* CollageViewer */,
 				AAC1D6461EB01BC0009E0956 /* CollageKit */,
+				AAC1D6321EB01BA7009E0956 /* CollageViewer */,
+				AA37B4161EAAAFC50047E1DD /* CollageTool */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		AA1B47F81EC349A800E35BD0 /* CoreGraphicsWindows */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CoreGraphicsWindows;
+			remoteRef = AA1B47F71EC349A800E35BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SandboxKit.framework;
 			remoteRef = AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreGraphicsKit.framework;
+			remoteRef = AA558B041EC292B90099A8B0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AAB710721EBFC4D30087A8EF /* LoggerKit.framework */ = {
@@ -546,7 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */,
-				AAC1D6381EB01BA7009E0956 /* CXFCollageViewController.swift in Sources */,
+				AAC1D6381EB01BA7009E0956 /* CXFViewController.swift in Sources */,
 				AAC1D6361EB01BA7009E0956 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,9 +600,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC1D6541EB01BD1009E0956 /* CXFCollage.swift in Sources */,
-				AAC1D6571EB01BD1009E0956 /* CGImage.swift in Sources */,
-				AAD369461EB0EBE500DAC0D9 /* CGColor.swift in Sources */,
-				AAC1D6561EB01BD1009E0956 /* CGSize.swift in Sources */,
 				AAC1D6551EB01BD1009E0956 /* CXFNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +611,11 @@
 			isa = PBXTargetDependency;
 			name = SandboxKit;
 			targetProxy = AA50B6481EB2272200F5F6F4 /* PBXContainerItemProxy */;
+		};
+		AA558B091EC292C30099A8B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoreGraphicsKit;
+			targetProxy = AA558B081EC292C30099A8B0 /* PBXContainerItemProxy */;
 		};
 		AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -629,7 +675,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -680,7 +726,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -770,11 +816,11 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 4;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = CollageKit/Info.plist;
@@ -795,11 +841,11 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 4;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = CollageKit/Info.plist;

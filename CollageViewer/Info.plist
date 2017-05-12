@@ -8,15 +8,17 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>Image</string>
+			<string>JPEG Image</string>
 			<key>CFBundleTypeRole</key>
-			<string>None</string>
+			<string>Viewer</string>
 			<key>LSHandlerRank</key>
 			<string>None</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>public.image</string>
+				<string>public.jpeg</string>
 			</array>
+			<key>NSDocumentClass</key>
+			<string>$(PRODUCT_MODULE_NAME).CXFDocument</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -48,7 +50,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>

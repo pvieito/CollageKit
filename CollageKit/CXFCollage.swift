@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreGraphics
+import CoreGraphicsKit
 import SWXMLHash
 import LoggerKit
 import FoundationKit
@@ -233,7 +234,7 @@ public class CXFCollage {
         self.context.setFillColor(backgroundColor)
         self.context.fill(collageRect)
 
-        if let backgroundImageURL = self.backgroundImageURL, let backgroundImage = CGImage.init(url: backgroundImageURL, croppingRatio: self.size) {
+        if let backgroundImageURL = self.backgroundImageURL, let backgroundImage = CGImage.init(url: backgroundImageURL, ratio: self.size.ratio) {
             Logger.log(debug: "Drawing background image: \(backgroundImageURL.path)")
 
             self.context.draw(backgroundImage, in: collageRect)
@@ -242,25 +243,27 @@ public class CXFCollage {
         Logger.log(debug: "Filling background color...")
 
         for node in self.nodes {
+
+
+            self.context.saveGState()
+            self.context.translateBy(x: node.collageArea.minX, y: node.collageArea.maxY)
+            self.context.rotate(by: -node.theta)
+
+            if self.shadows {
+                self.context.setShadow(offset: CGSize.zero, blur: self.size.width * 0.01)
+            }
+
             if let image = node.image {
                 Logger.log(debug: "Drawing node image: \(node.imageURL.path)")
-
-                self.context.saveGState()
-                self.context.translateBy(x: node.collageArea.minX, y: node.collageArea.maxY)
-                self.context.rotate(by: -node.theta)
-
-                if self.shadows {
-                    self.context.setShadow(offset: CGSize.zero, blur: self.size.width * 0.01)
-                }
-
                 self.context.draw(image, in: node.topLeftCenteredArea)
-                self.context.restoreGState()
             }
             else {
                 Logger.log(debug: "Drawing node black area: \(node.imageURL.path)")
                 self.context.setStrokeColor(CGColor.black)
-                self.context.stroke(node.collageArea, width: 3)
+                self.context.stroke(node.topLeftCenteredArea, width: 3)
             }
+
+            self.context.restoreGState()
         }
 
         self.image = self.context.makeImage()
@@ -297,7 +300,7 @@ public class CXFCollage {
         do {
             try FileManager.default.createDirectory(at: temporalDirectoryURL, withIntermediateDirectories: true, attributes: nil)
             let temporaryImageURL = temporalDirectoryURL.appendingPathComponent(UUID().uuidString).appendingPathExtension("jpg")
-            image.write(at: temporaryImageURL)
+            image.write(to: temporaryImageURL)
 
             Logger.log(debug: "Temporary image saved at: \(temporaryImageURL.path)")
             return temporaryImageURL

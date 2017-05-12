@@ -12,7 +12,7 @@ import LoggerKit
 import SandboxKit
 import CollageKit
 
-class CXFCollageViewController: NSViewController, NSWindowDelegate {
+class CXFViewController: NSViewController, NSWindowDelegate {
 
     @IBOutlet weak var activityIndicator: NSProgressIndicator!
     @IBOutlet weak var imageView: IKImageView!
@@ -31,7 +31,13 @@ class CXFCollageViewController: NSViewController, NSWindowDelegate {
         self.view.window?.delegate = self
         self.imageView.currentToolMode = IKToolModeMove
 
-        guard let imagesDirectoryURL = collage?.imagesDirectoryURL else {
+
+        guard let collage = collage else {
+            Logger.log(debug: "Collage not set.")
+            return
+        }
+
+        guard let imagesDirectoryURL = collage.imagesDirectoryURL else {
             Logger.log(error: "Images directory not found.")
             return
         }
@@ -55,6 +61,23 @@ class CXFCollageViewController: NSViewController, NSWindowDelegate {
                 }
             }
         }
+
+        func printResponderChain(from responder: NSResponder?) {
+            var responder = responder
+            while let r = responder {
+                print(r)
+                responder = r.nextResponder
+            }
+        }
+        
+        
+        printResponderChain(from: view)
+    }
+
+    func load(imageURL: URL) {
+        self.imageView.isHidden = false
+
+        self.imageView.setImageWith(imageURL)
     }
 
     func load(collage: CXFCollage) {
@@ -73,6 +96,15 @@ class CXFCollageViewController: NSViewController, NSWindowDelegate {
             guard let image = image else {
                 self.imageView.isHidden = true
                 Logger.log(error: "Collage did not render successfully.")
+
+                if let window = self.view.window {
+                    let alert = NSAlert()
+                    alert.messageText = "Collage did not render successfully"
+                    alert.addButton(withTitle: "OK")
+                    alert.beginSheetModal(for: window, completionHandler: { (response) in
+                        self.view.window?.close()
+                    })
+                }
                 return
             }
 
@@ -81,29 +113,8 @@ class CXFCollageViewController: NSViewController, NSWindowDelegate {
         })
     }
 
-    func requestAccess(to url: URL, completionHandler: @escaping (Bool) -> ()) {
-        if FileManager.default.fileExists(atPath: url.path) {
-            let openPanel = NSOpenPanel()
-            openPanel.canChooseDirectories = true
-            openPanel.canChooseFiles = false
-            openPanel.allowsMultipleSelection = false
-            openPanel.prompt = "Allow"
-            openPanel.directoryURL = url
-
-            if let window = view.window {
-                openPanel.beginSheetModal(for: window) { response in
-                    if response == NSModalResponseOK {
-                        completionHandler(true)
-                    }
-                    else {
-                        completionHandler(false)
-                    }
-                }
-            }
-        }
-        else {
-            completionHandler(false)
-        }
+    func printDocument(_ sender: Any) {
+        Logger.log(debug: "??")
     }
 }
 

@@ -8,11 +8,13 @@
 
 import Cocoa
 import CollageKit
+import CoreGraphicsKit
 import LoggerKit
 
 class CXFDocument: NSDocument {
 
     var collage: CXFCollage? = nil
+    var imageURL: URL? = nil
 
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
@@ -21,20 +23,34 @@ class CXFDocument: NSDocument {
 
         self.addWindowController(windowController)
 
-        if let viewController = self.windowControllers.first?.window?.contentViewController as? CXFCollageViewController, let collage = self.collage {
-            viewController.load(collage: collage)
+        if let viewController = self.windowControllers.first?.window?.contentViewController as? CXFViewController {
+
+            if let collage = self.collage {
+                viewController.load(collage: collage)
+            }
+            else if let imageURL = imageURL {
+                viewController.load(imageURL: imageURL)
+            }
         }
     }
 
     override func read(from url: URL, ofType typeName: String) throws {
-        do {
-            self.collage = try CXFCollage(contentsOf: url)
-        }
-        catch {
-            Logger.log(error: error.localizedDescription)
-            let alert = NSAlert(error: error)
-            alert.runModal()
-            throw error
+
+        switch typeName {
+        case "public.jpeg":
+            self.imageURL = url
+        case "com.google.picasa.collage":
+            do {
+                self.collage = try CXFCollage(contentsOf: url)
+            }
+            catch {
+                Logger.log(error: error.localizedDescription)
+                let alert = NSAlert(error: error)
+                alert.runModal()
+                throw error
+            }
+        default:
+            throw NSError(domain: "com.pvieito.CollageViewer.open", code: -3, userInfo: nil)
         }
     }
 
@@ -57,7 +73,7 @@ class CXFDocument: NSDocument {
 
             savePanel.beginSheetModal(for: window) { (result) in
                 if result == NSFileHandlingPanelOKButton, let url = savePanel.url {
-                    image.write(at: url)
+                    image.write(to: url)
                 }
             }
         }
