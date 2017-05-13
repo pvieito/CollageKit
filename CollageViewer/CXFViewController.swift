@@ -42,23 +42,23 @@ class CXFViewController: NSViewController, NSWindowDelegate {
             return
         }
 
-        SBXSandboxManager.shared.requestAccess(url: imagesDirectoryURL, window: self.view.window) { (granted) in
-            if granted {
-                self.renderCollage()
-            }
-            else {
-                Logger.log(error: "Access not granted.")
+        SandboxManager.shared.requestAccess(url: imagesDirectoryURL, window: self.view.window) { (error) in
+            if let error = error {
+                Logger.log(error: error)
                 self.activityIndicator.stopAnimation(self)
 
                 if let window = self.view.window {
                     let alert = NSAlert()
                     alert.messageText = "Collage photos not accessible"
-                    alert.informativeText = "Collage photos are stored in \(imagesDirectoryURL.path)."
+                    alert.informativeText = error.localizedDescription
                     alert.addButton(withTitle: "OK")
                     alert.beginSheetModal(for: window, completionHandler: { (response) in
                         self.view.window?.close()
                     })
                 }
+            }
+            else {
+                self.renderCollage()
             }
         }
 
