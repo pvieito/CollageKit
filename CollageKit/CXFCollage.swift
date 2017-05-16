@@ -189,8 +189,8 @@ public class CXFCollage {
             Logger.log(debug: "Collage Spacing: Not specified")
         }
 
-        if let hexColorString = collageXML["background"].element?.attribute(by: "color")?.text, let hexColor = Int(hexColorString, radix: 16) {
-            self.backgroundColor = CGColor.init(argb: hexColor)
+        if let hexColorString = collageXML["background"].element?.attribute(by: "color")?.text, let backgroundColor = CGColor.init(hexARGB: hexColorString) {
+            self.backgroundColor = backgroundColor
             Logger.log(debug: "Collage Background Color: \(hexColorString) -> \(self.backgroundColor.components?.debugDescription ?? "--")")
         }
         else {
