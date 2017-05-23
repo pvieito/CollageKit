@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B41A1EAAAFC50047E1DD /* main.swift */; };
+		AA3BDB871ECCC9FE0041E3E4 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
 		AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; };
 		AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -194,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3BDB871ECCC9FE0041E3E4 /* CoreGraphicsKit.framework in Frameworks */,
 				AAFE81E61EC0997F008C01A3 /* CommandLineKit.framework in Frameworks */,
 				AAB710831EBFC5170087A8EF /* LoggerKit.framework in Frameworks */,
 				AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */,
@@ -501,7 +503,7 @@
 		AA1B47F81EC349A800E35BD0 /* CoreGraphicsWindows */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
-			path = CoreGraphicsWindows;
+			path = CoreGraphicsTool;
 			remoteRef = AA1B47F71EC349A800E35BD0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

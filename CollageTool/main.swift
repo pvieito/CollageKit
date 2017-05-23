@@ -8,6 +8,7 @@
 
 import Cocoa
 import CoreGraphics
+import CoreGraphicsKit
 import LoggerKit
 import CommandLineKit
 import CollageKit
@@ -49,13 +50,12 @@ for collagePath in collagePaths {
         Logger.log(info: "Date: \(collage.albumDate ?? "--")")
         Logger.log(info: "Size: \(collage.size)")
 
-        collage.render()
+        let image = try collage.render()
 
-        if let imageURL = collage.saveImageTemporary() {
-            NSWorkspace.shared().open(imageURL)
-        }
+        let imageURL = try image.temporaryFile()
+        NSWorkspace.shared().open(imageURL)
     }
     catch {
-        Logger.log(error: error.localizedDescription)
+        Logger.log(error: error)
     }
 }

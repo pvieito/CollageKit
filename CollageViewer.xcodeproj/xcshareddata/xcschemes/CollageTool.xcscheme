@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-i /Users/pvieito/Pictures/Picasa/Collages/ModelTopology.cxf"
+            argument = "-i /Users/pvieito/Pictures/Picasa/Collages/Images.cxf"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

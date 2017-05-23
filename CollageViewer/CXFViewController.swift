@@ -95,7 +95,6 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
             guard let image = image else {
                 self.imageView.isHidden = true
-                Logger.log(error: "Collage did not render successfully.")
 
                 if let window = self.view.window {
                     let alert = NSAlert()

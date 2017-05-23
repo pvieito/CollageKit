@@ -22,6 +22,7 @@ public class CXFCollage {
         case malformedAttribute(String)
         case invalidGraphicContext
         case invalidCollageFile
+        case imageNotRendered
 
         public var errorDescription: String? {
             switch self {
@@ -37,6 +38,9 @@ public class CXFCollage {
                 return "Collage file has an unkown format for the “\(attributeName)” attribute."
             case .invalidGraphicContext:
                 return "Invalid Core Graphics context."
+            case .imageNotRendered:
+                return "The Collage did not render successfully."
+
             }
         }
     }
@@ -227,7 +231,7 @@ public class CXFCollage {
     }
 
     /// Render the collage an save it in the image property.
-    public func render() {
+    public func render() throws -> CGImage {
         Logger.log(debug: "Rendering Collage...")
 
         let collageRect = CGRect(origin: CGPoint.zero, size: self.size)
@@ -243,7 +247,6 @@ public class CXFCollage {
         Logger.log(debug: "Filling background color...")
 
         for node in self.nodes {
-
 
             self.context.saveGState()
             self.context.translateBy(x: node.collageArea.minX, y: node.collageArea.maxY)
@@ -266,8 +269,15 @@ public class CXFCollage {
             self.context.restoreGState()
         }
 
-        self.image = self.context.makeImage()
         Logger.log(debug: "Collage finished rendering.")
+
+        guard let renderedImage = self.context.makeImage() else {
+            Logger.log(error: "Collage did not render successfully.")
+            throw CollageError.imageNotRendered
+        }
+
+        self.image = renderedImage
+        return renderedImage
     }
 
     /// Render asynchronously the collage.
@@ -275,39 +285,12 @@ public class CXFCollage {
     /// - Parameter completionHandler: Called when the rendering has finished.
     public func render(completionHandler: @escaping (CGImage?) -> ()) {
         DispatchQueue(label: "com.pvieito.CollageKit.CXFCollage.collageRendering").async {
-            self.render()
+
+            let image = try? self.render()
 
             DispatchQueue.main.async {
-                completionHandler(self.image)
+                completionHandler(image)
             }
-        }
-    }
-
-    /// Saves the rendered image to a temporary path.
-    public func saveImageTemporary() -> URL? {
-
-        guard let image = self.image else {
-            Logger.log(error: "No image rendered. Cannot save temporary image.")
-            return nil
-        }
-
-        let bundleIdentifier = Bundle.init(for: CXFCollage.self).bundleIdentifier ?? "CollageKit"
-
-        let temporalDirectoryURL = FileManager.default.temporaryDirectory.appendingPathComponent(bundleIdentifier).appendingPathComponent("CXFCollage")
-
-        try? FileManager.default.removeItem(at: temporalDirectoryURL)
-
-        do {
-            try FileManager.default.createDirectory(at: temporalDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-            let temporaryImageURL = temporalDirectoryURL.appendingPathComponent(UUID().uuidString).appendingPathExtension("jpg")
-            image.write(to: temporaryImageURL)
-
-            Logger.log(debug: "Temporary image saved at: \(temporaryImageURL.path)")
-            return temporaryImageURL
-        }
-        catch {
-            Logger.log(error: "Error saving temporary image: \(error.localizedDescription).")
-            return nil
         }
     }
 
