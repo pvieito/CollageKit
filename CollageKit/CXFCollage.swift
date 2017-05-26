@@ -283,13 +283,22 @@ public class CXFCollage {
     /// Render asynchronously the collage.
     ///
     /// - Parameter completionHandler: Called when the rendering has finished.
-    public func render(completionHandler: @escaping (CGImage?) -> ()) {
+    public func render(completionHandler: @escaping (CGImage?, Error?) -> ()) {
         DispatchQueue(label: "com.pvieito.CollageKit.CXFCollage.collageRendering").async {
 
-            let image = try? self.render()
+            do {
+                let image = try self.render()
 
-            DispatchQueue.main.async {
-                completionHandler(image)
+                DispatchQueue.main.async {
+                    completionHandler(image, nil)
+                }
+            }
+            catch {
+
+                DispatchQueue.main.async {
+                    completionHandler(nil, error)
+                }
+
             }
         }
     }

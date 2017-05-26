@@ -19,6 +19,20 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
     var collage: CXFCollage? = nil
 
+    enum CollagerViewerError: LocalizedError {
+        case collageNotDefined
+        case imageDirectoryNotFound
+
+        var errorDescription: String? {
+            switch self {
+            case .collageNotDefined:
+                return "Collage not set."
+            case .imageDirectoryNotFound:
+                return "Images directory not found."
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,47 +45,29 @@ class CXFViewController: NSViewController, NSWindowDelegate {
         self.view.window?.delegate = self
         self.imageView.currentToolMode = IKToolModeMove
 
+        do {
+            guard let collage = collage else {
+                throw CollagerViewerError.collageNotDefined
+            }
 
-        guard let collage = collage else {
-            Logger.log(debug: "Collage not set.")
-            return
-        }
+            guard let imagesDirectoryURL = collage.imagesDirectoryURL else {
+                throw CollagerViewerError.imageDirectoryNotFound
+            }
 
-        guard let imagesDirectoryURL = collage.imagesDirectoryURL else {
-            Logger.log(error: "Images directory not found.")
-            return
-        }
+            let request = try SandboxRequest(url: imagesDirectoryURL)
 
-        SandboxManager.shared.requestAccess(url: imagesDirectoryURL, window: self.view.window) { (error) in
-            if let error = error {
-                Logger.log(error: error)
-                self.activityIndicator.stopAnimation(self)
-
-                if let window = self.view.window {
-                    let alert = NSAlert()
-                    alert.messageText = "Collage photos not accessible"
-                    alert.informativeText = error.localizedDescription
-                    alert.addButton(withTitle: "OK")
-                    alert.beginSheetModal(for: window, completionHandler: { (response) in
-                        self.view.window?.close()
-                    })
+            request.requestTemporaryAccess(window: self.view.window, completionHandler: { (error) in
+                if let error = error {
+                    self.presentError(error)
                 }
-            }
-            else {
-                self.renderCollage()
-            }
+                else {
+                    self.renderCollage()
+                }
+            })
         }
-
-        func printResponderChain(from responder: NSResponder?) {
-            var responder = responder
-            while let r = responder {
-                print(r)
-                responder = r.nextResponder
-            }
+        catch {
+            self.presentError(error)
         }
-        
-        
-        printResponderChain(from: view)
     }
 
     func load(imageURL: URL) {
@@ -82,38 +78,40 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
     func load(collage: CXFCollage) {
         self.collage = collage
-
         self.imageView.isHidden = true
-        self.activityIndicator.startAnimation(self)
-        self.view.window?.title = collage.albumTitle ?? "CollageViewer"
     }
 
     func renderCollage() {
-        self.collage?.render(completionHandler: { (image) in
+        self.activityIndicator.startAnimation(self)
+        self.view.window?.title = self.collage?.albumTitle ?? "CollageViewer"
+
+        self.collage?.render(completionHandler: { (image, error) in
 
             self.activityIndicator.stopAnimation(self)
 
-            guard let image = image else {
-                self.imageView.isHidden = true
-
-                if let window = self.view.window {
-                    let alert = NSAlert()
-                    alert.messageText = "Collage did not render successfully"
-                    alert.addButton(withTitle: "OK")
-                    alert.beginSheetModal(for: window, completionHandler: { (response) in
-                        self.view.window?.close()
-                    })
-                }
-                return
+            if let image = image {
+                self.imageView.isHidden = false
+                self.imageView.setImage(image, imageProperties: [:])
             }
-
-            self.imageView.isHidden = false
-            self.imageView.setImage(image, imageProperties: [:])
+            else if let error = error {
+                self.imageView.isHidden = true
+                self.presentError(error)
+            }
         })
     }
 
-    func printDocument(_ sender: Any) {
-        Logger.log(debug: "??")
+    @discardableResult
+    override func presentError(_ error: Error) -> Bool {
+
+        Logger.log(error: error)
+        if let window = self.view.window {
+            self.presentError(error, modalFor: window, delegate: nil, didPresent: nil, contextInfo: nil)
+        }
+        else {
+            return super.presentError(error)
+        }
+
+        return false
     }
 }
 

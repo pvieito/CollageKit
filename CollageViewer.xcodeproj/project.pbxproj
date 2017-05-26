@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA37B41B1EAAAFC50047E1DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B41A1EAAAFC50047E1DD /* main.swift */; };
 		AA3BDB871ECCC9FE0041E3E4 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
-		AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; };
-		AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA4F545B1ED8889F000C1333 /* SandboxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4F545A1ED8888A000C1333 /* SandboxKit.framework */; };
+		AA4F545C1ED8889F000C1333 /* SandboxKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA4F545A1ED8888A000C1333 /* SandboxKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA558B0A1EC292E90099A8B0 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
 		AA558B121EC293D60099A8B0 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
@@ -44,16 +44,16 @@
 			remoteGlobalIDString = AA7D0E5D1EC299D9005036CE;
 			remoteInfo = CoreGraphicsWindows;
 		};
-		AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */ = {
+		AA4F54591ED8888A000C1333 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
+			containerPortal = AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AA50B60B1EB21C4F00F5F6F4;
 			remoteInfo = SandboxKit;
 		};
-		AA50B6481EB2272200F5F6F4 /* PBXContainerItemProxy */ = {
+		AA4F545D1ED8889F000C1333 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
+			containerPortal = AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AA50B60A1EB21C4F00F5F6F4;
 			remoteInfo = SandboxKit;
@@ -154,11 +154,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				AAB710801EBFC5120087A8EF /* LoggerKit.framework in Embed Frameworks */,
+				AA4F545C1ED8889F000C1333 /* SandboxKit.framework in Embed Frameworks */,
 				AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */,
 				AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */,
 				AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */,
 				AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */,
-				AA50B6471EB2272200F5F6F4 /* SandboxKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,7 +172,7 @@
 		AA37B41A1EAAAFC50047E1DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = ../SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		AA37B4401EACC1360047E1DD /* CXFCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFCollage.swift; sourceTree = "<group>"; };
-		AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
+		AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
 		AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreGraphicsKit.xcodeproj; path = ../CoreGraphicsKit/CoreGraphicsKit.xcodeproj; sourceTree = "<group>"; };
 		AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoggerKit.xcodeproj; path = ../LoggerKit/LoggerKit.xcodeproj; sourceTree = "<group>"; };
 		AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoundationKit.xcodeproj; path = ../FoundationKit/FoundationKit.xcodeproj; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 				AA558B121EC293D60099A8B0 /* CoreGraphicsKit.framework in Frameworks */,
 				AAB7107F1EBFC5120087A8EF /* LoggerKit.framework in Frameworks */,
 				AAC1D64E1EB01BC0009E0956 /* CollageKit.framework in Frameworks */,
-				AA50B6461EB2272200F5F6F4 /* SandboxKit.framework in Frameworks */,
+				AA4F545B1ED8889F000C1333 /* SandboxKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,11 +230,11 @@
 		AA37B40E1EAAAFC50047E1DD = {
 			isa = PBXGroup;
 			children = (
+				AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */,
 				AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */,
 				AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */,
 				AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */,
 				AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */,
-				AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */,
 				AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */,
 				AAC1D6481EB01BC0009E0956 /* CollageKit */,
 				AA37B4191EAAAFC50047E1DD /* CollageTool */,
@@ -262,10 +262,10 @@
 			path = CollageTool;
 			sourceTree = "<group>";
 		};
-		AA50B6401EB2271900F5F6F4 /* Products */ = {
+		AA4F54561ED8888A000C1333 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */,
+				AA4F545A1ED8888A000C1333 /* SandboxKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */,
-				AA1B47F81EC349A800E35BD0 /* CoreGraphicsWindows */,
+				AA1B47F81EC349A800E35BD0 /* CoreGraphicsTool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -389,10 +389,10 @@
 			dependencies = (
 				AAC1D64D1EB01BC0009E0956 /* PBXTargetDependency */,
 				AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */,
-				AA50B6491EB2272200F5F6F4 /* PBXTargetDependency */,
 				AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */,
 				AAB710821EBFC5120087A8EF /* PBXTargetDependency */,
 				AA558B091EC292C30099A8B0 /* PBXTargetDependency */,
+				AA4F545E1ED8889F000C1333 /* PBXTargetDependency */,
 			);
 			name = CollageViewer;
 			productName = CollageViewer;
@@ -482,8 +482,8 @@
 					ProjectRef = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
 				},
 				{
-					ProductGroup = AA50B6401EB2271900F5F6F4 /* Products */;
-					ProjectRef = AA50B63F1EB2271900F5F6F4 /* SandboxKit.xcodeproj */;
+					ProductGroup = AA4F54561ED8888A000C1333 /* Products */;
+					ProjectRef = AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */;
 				},
 				{
 					ProductGroup = AAD368F11EB0C25B00DAC0D9 /* Products */;
@@ -500,18 +500,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AA1B47F81EC349A800E35BD0 /* CoreGraphicsWindows */ = {
+		AA1B47F81EC349A800E35BD0 /* CoreGraphicsTool */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CoreGraphicsTool;
 			remoteRef = AA1B47F71EC349A800E35BD0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		AA50B6451EB2271900F5F6F4 /* SandboxKit.framework */ = {
+		AA4F545A1ED8888A000C1333 /* SandboxKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SandboxKit.framework;
-			remoteRef = AA50B6441EB2271900F5F6F4 /* PBXContainerItemProxy */;
+			remoteRef = AA4F54591ED8888A000C1333 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */ = {
@@ -609,10 +609,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AA50B6491EB2272200F5F6F4 /* PBXTargetDependency */ = {
+		AA4F545E1ED8889F000C1333 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SandboxKit;
-			targetProxy = AA50B6481EB2272200F5F6F4 /* PBXContainerItemProxy */;
+			targetProxy = AA4F545D1ED8889F000C1333 /* PBXContainerItemProxy */;
 		};
 		AA558B091EC292C30099A8B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
