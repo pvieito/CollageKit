@@ -19,20 +19,6 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
     var collage: CXFCollage? = nil
 
-    enum CollagerViewerError: LocalizedError {
-        case collageNotDefined
-        case imageDirectoryNotFound
-
-        var errorDescription: String? {
-            switch self {
-            case .collageNotDefined:
-                return "Collage not set."
-            case .imageDirectoryNotFound:
-                return "Images directory not found."
-            }
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,11 +33,11 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
         do {
             guard let collage = collage else {
-                throw CollagerViewerError.collageNotDefined
+                return
             }
 
             guard let imagesDirectoryURL = collage.imagesDirectoryURL else {
-                throw CollagerViewerError.imageDirectoryNotFound
+                return
             }
 
             let request = try SandboxRequest(url: imagesDirectoryURL)
