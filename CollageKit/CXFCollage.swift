@@ -318,10 +318,9 @@ public class CXFCollage {
     // MARK: Private implementation.
 
     internal func imageURL(from cxfPath: String) -> URL {
-        if cxfPath.hasPrefix("$"), let userPath = getpwuid(getuid()).pointee.pw_dir {
+        if cxfPath.hasPrefix("$"), let userHomeURL = FileManager.default.unsandboxedHomeDirectory {
             let cxfPath = cxfPath.applyingRegularExpression(pattern: "^\\$(HomeDir\\/)?", sustitution: "")
             
-            let userHomeURL = URL(fileURLWithPath: String(cString: userPath))
             return URL(fileURLWithPath: cxfPath, relativeTo: userHomeURL)
         }
         else {
