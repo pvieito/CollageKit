@@ -14,7 +14,7 @@ import CommandLineKit
 import CollageKit
 
 let collagesOption = MultiStringOption(shortFlag: "i", longFlag: "input", required: true, helpMessage: "Input collage files (.cxf extension).")
-let verboseOption = BoolOption(shortFlag: "v", longFlag: "verbose", helpMessage: "Verbose Mode.")
+let verboseOption = BoolOption(shortFlag: "v", longFlag: "verbose", helpMessage: "Verbose mode.")
 let helpOption = BoolOption(shortFlag: "h", longFlag: "help", helpMessage: "Prints a help message.")
 
 let cli = CommandLineKit.CommandLine()
