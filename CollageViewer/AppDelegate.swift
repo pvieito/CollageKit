@@ -40,12 +40,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func application(_ sender: NSApplication, openFiles filenames: [String]) {
 
         for path in filenames {
-            NSDocumentController.shared().openDocument(withContentsOf: URL(fileURLWithPath: path), display: true, completionHandler: {_,_,_ in })
+            NSDocumentController.shared.openDocument(withContentsOf: URL(fileURLWithPath: path), display: true, completionHandler: {_,_,_ in })
         }
     }
 
     func newDocument(_ sender: Any) {
-        NSDocumentController.shared().openDocument(self)
+        NSDocumentController.shared.openDocument(self)
     }
 }
 

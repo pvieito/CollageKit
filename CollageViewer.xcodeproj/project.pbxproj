@@ -37,13 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AA1B47F71EC349A800E35BD0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AA7D0E5D1EC299D9005036CE;
-			remoteInfo = CoreGraphicsWindows;
-		};
 		AA4F54591ED8888A000C1333 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */;
@@ -71,6 +64,76 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA558AEC1EC28E3F0099A8B0;
 			remoteInfo = CoreGraphicsKit;
+		};
+		AA7F023C1EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AA558AEC1EC28E3F0099A8B0;
+			remoteInfo = CoreGraphicsKit;
+		};
+		AA7F023E1EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AABBD99C1E5761BD00AE5B46;
+			remoteInfo = LoggerKit;
+		};
+		AA7F02401EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AA2563C41E57639E0037CBED;
+			remoteInfo = FoundationKit;
+		};
+		AA7F02421EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CD9D052B1A757D8B003CCB21;
+			remoteInfo = "SWXMLHash OSX";
+		};
+		AA7F024C1EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD6083EF196CA106000B4F8D;
+			remoteInfo = "SWXMLHash iOS";
+		};
+		AA7F024E1EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD6083FA196CA106000B4F8D;
+			remoteInfo = "SWXMLHash iOS Tests";
+		};
+		AA7F02501EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9D05361A757D8B003CCB21;
+			remoteInfo = "SWXMLHash OSX Tests";
+		};
+		AA7F02521EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDDEC74C1BF6311A00AB138B;
+			remoteInfo = "SWXMLHash tvOS";
+		};
+		AA7F02541EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDDEC7551BF6311B00AB138B;
+			remoteInfo = "SWXMLHash tvOS Tests";
+		};
+		AA7F02561EE795FC00597173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDDEC7681BF6316C00AB138B;
+			remoteInfo = "SWXMLHash watchOS";
 		};
 		AAB710711EBFC4D30087A8EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -127,13 +190,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 5D06884319674D7D00BBFAAC;
 			remoteInfo = CommandLineKit;
-		};
-		AAFE81E41EC0997A008C01A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5D06884E19674D7D00BBFAAC;
-			remoteInfo = CommandLineKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -274,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */,
-				AA1B47F81EC349A800E35BD0 /* CoreGraphicsTool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,7 +386,13 @@
 		AAD368F11EB0C25B00DAC0D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				AA7F024D1EE795FC00597173 /* SWXMLHash.framework */,
+				AA7F024F1EE795FC00597173 /* SWXMLHash iOS Tests.xctest */,
 				AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */,
+				AA7F02511EE795FC00597173 /* SWXMLHash OSX Tests.xctest */,
+				AA7F02531EE795FC00597173 /* SWXMLHash.framework */,
+				AA7F02551EE795FC00597173 /* SWXMLHash tvOS Tests.xctest */,
+				AA7F02571EE795FC00597173 /* SWXMLHash.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,7 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				AAFE81E31EC0997A008C01A3 /* CommandLineKit.framework */,
-				AAFE81E51EC0997A008C01A3 /* CommandLineKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -411,6 +471,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				AA7F023D1EE795FC00597173 /* PBXTargetDependency */,
+				AA7F023F1EE795FC00597173 /* PBXTargetDependency */,
+				AA7F02411EE795FC00597173 /* PBXTargetDependency */,
+				AA7F02431EE795FC00597173 /* PBXTargetDependency */,
 			);
 			name = CollageKit;
 			productName = CollageKit;
@@ -425,7 +489,7 @@
 			attributes = {
 				CLASSPREFIX = CXF;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Pedro José Pereira Vieito";
 				TargetAttributes = {
 					AA37B4161EAAAFC50047E1DD = {
@@ -436,6 +500,7 @@
 					AAC1D6321EB01BA7009E0956 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = T7MC635YG5;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -449,6 +514,7 @@
 					AAC1D6461EB01BC0009E0956 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = T7MC635YG5;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -500,13 +566,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AA1B47F81EC349A800E35BD0 /* CoreGraphicsTool */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CoreGraphicsTool;
-			remoteRef = AA1B47F71EC349A800E35BD0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		AA4F545A1ED8888A000C1333 /* SandboxKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -519,6 +578,48 @@
 			fileType = wrapper.framework;
 			path = CoreGraphicsKit.framework;
 			remoteRef = AA558B041EC292B90099A8B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7F024D1EE795FC00597173 /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = AA7F024C1EE795FC00597173 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7F024F1EE795FC00597173 /* SWXMLHash iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SWXMLHash iOS Tests.xctest";
+			remoteRef = AA7F024E1EE795FC00597173 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7F02511EE795FC00597173 /* SWXMLHash OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SWXMLHash OSX Tests.xctest";
+			remoteRef = AA7F02501EE795FC00597173 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7F02531EE795FC00597173 /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = AA7F02521EE795FC00597173 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7F02551EE795FC00597173 /* SWXMLHash tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SWXMLHash tvOS Tests.xctest";
+			remoteRef = AA7F02541EE795FC00597173 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA7F02571EE795FC00597173 /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = AA7F02561EE795FC00597173 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AAB710721EBFC4D30087A8EF /* LoggerKit.framework */ = {
@@ -547,13 +648,6 @@
 			fileType = wrapper.framework;
 			path = CommandLineKit.framework;
 			remoteRef = AAFE81E21EC0997A008C01A3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AAFE81E51EC0997A008C01A3 /* CommandLineKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CommandLineKitTests.xctest;
-			remoteRef = AAFE81E41EC0997A008C01A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -619,6 +713,26 @@
 			name = CoreGraphicsKit;
 			targetProxy = AA558B081EC292C30099A8B0 /* PBXContainerItemProxy */;
 		};
+		AA7F023D1EE795FC00597173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoreGraphicsKit;
+			targetProxy = AA7F023C1EE795FC00597173 /* PBXContainerItemProxy */;
+		};
+		AA7F023F1EE795FC00597173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoggerKit;
+			targetProxy = AA7F023E1EE795FC00597173 /* PBXContainerItemProxy */;
+		};
+		AA7F02411EE795FC00597173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoundationKit;
+			targetProxy = AA7F02401EE795FC00597173 /* PBXContainerItemProxy */;
+		};
+		AA7F02431EE795FC00597173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SWXMLHash OSX";
+			targetProxy = AA7F02421EE795FC00597173 /* PBXContainerItemProxy */;
+		};
 		AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FoundationKit;
@@ -663,7 +777,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -671,7 +787,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -700,6 +820,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -714,7 +835,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -722,7 +845,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -743,6 +870,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -757,7 +886,6 @@
 				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -771,7 +899,6 @@
 				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -790,7 +917,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -809,13 +935,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		AAC1D6511EB01BC0009E0956 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 5;
@@ -832,7 +958,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -841,6 +966,7 @@
 		AAC1D6521EB01BC0009E0956 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 5;
@@ -857,7 +983,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
