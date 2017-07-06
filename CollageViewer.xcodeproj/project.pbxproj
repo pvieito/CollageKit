@@ -65,6 +65,20 @@
 			remoteGlobalIDString = AA558AEC1EC28E3F0099A8B0;
 			remoteInfo = CoreGraphicsKit;
 		};
+		AA628B851F093860003B7D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA912C1A1EE96CF2002DD639;
+			remoteInfo = FoundationKitWatch;
+		};
+		AA628B881F093860003B7D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA912BE01EE96C56002DD639;
+			remoteInfo = LoggerKitWatch;
+		};
 		AA7F023C1EE795FC00597173 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */;
@@ -338,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				AAB710721EBFC4D30087A8EF /* LoggerKit.framework */,
+				AA628B891F093860003B7D25 /* LoggerKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				AAB710791EBFC5010087A8EF /* FoundationKit.framework */,
+				AA628B861F093860003B7D25 /* FoundationKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -578,6 +594,20 @@
 			fileType = wrapper.framework;
 			path = CoreGraphicsKit.framework;
 			remoteRef = AA558B041EC292B90099A8B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA628B861F093860003B7D25 /* FoundationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoundationKit.framework;
+			remoteRef = AA628B851F093860003B7D25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA628B891F093860003B7D25 /* LoggerKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoggerKit.framework;
+			remoteRef = AA628B881F093860003B7D25 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AA7F024D1EE795FC00597173 /* SWXMLHash.framework */ = {
