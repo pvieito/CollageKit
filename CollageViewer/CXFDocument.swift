@@ -55,16 +55,8 @@ class CXFDocument: NSDocument {
     }
 
     override func saveAs(_ sender: Any?) {
-        self.save(sender)
-    }
-
-    override func saveTo(_ sender: Any?) {
-        self.save(sender)
-    }
-
-    override func save(_ sender: Any?) {
-
-        if let window = self.windowControllers.first?.window, let image = collage?.image {
+        
+        if let window = self.windowForSheet, let image = collage?.image {
             let savePanel = NSSavePanel()
 
             savePanel.directoryURL = self.fileURL?.deletingLastPathComponent()
