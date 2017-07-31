@@ -100,11 +100,6 @@ public class CXFCollage {
         return collageURL.lastPathComponent
     }
 
-    public convenience init(contentsOf collagePath: String) throws {
-        let collageURL = URL(fileURLWithPath: collagePath)
-        try self.init(contentsOf: collageURL)
-    }
-
     public init(contentsOf collageURL: URL) throws {
         self.collageURL = collageURL
 

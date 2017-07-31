@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import FoundationKit
 import CoreGraphics
 import CoreGraphicsKit
 import LoggerKit
@@ -37,7 +38,7 @@ Logger.logMode = .commandLine
 Logger.logLevel = verboseOption.value ? .debug : .info
 
 
-guard let collagePaths = collagesOption.value, collagePaths.count > 0 else {
+guard let collagePaths = collagesOption.value?.pathURLs, collagePaths.count > 0 else {
     Logger.log(error: "No input files specified.")
     exit(EX_USAGE)
 }
