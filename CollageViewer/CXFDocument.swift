@@ -65,7 +65,12 @@ class CXFDocument: NSDocument {
 
             savePanel.beginSheetModal(for: window) { (result) in
                 if result == .OK, let url = savePanel.url {
-                    image.write(to: url)
+                    do {
+                        try image.write(to: url)
+                    }
+                    catch {
+                        Logger.log(error: error)
+                    }
                 }
             }
         }
