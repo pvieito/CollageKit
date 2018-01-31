@@ -22,7 +22,7 @@ let cli = CommandLineKit.CommandLine()
 cli.addOptions(collagesOption, verboseOption, helpOption)
 
 do {
-    try cli.parse()
+    try cli.parse(strict: true)
 }
 catch {
     cli.printUsage(error)
