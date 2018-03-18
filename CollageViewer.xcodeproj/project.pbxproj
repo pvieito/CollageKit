@@ -149,6 +149,13 @@
 			remoteGlobalIDString = CDDEC7681BF6316C00AB138B;
 			remoteInfo = "SWXMLHash watchOS";
 		};
+		AA822FD7205F1089007E6D16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AAD31D251F883C8800C056DD;
+			remoteInfo = FoundationKitTests;
+		};
 		AAB710711EBFC4D30087A8EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */;
@@ -362,6 +369,7 @@
 			children = (
 				AAB710791EBFC5010087A8EF /* FoundationKit.framework */,
 				AA628B861F093860003B7D25 /* FoundationKit.framework */,
+				AA822FD8205F1089007E6D16 /* FoundationKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -652,6 +660,13 @@
 			remoteRef = AA7F02561EE795FC00597173 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		AA822FD8205F1089007E6D16 /* FoundationKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FoundationKitTests.xctest;
+			remoteRef = AA822FD7205F1089007E6D16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		AAB710721EBFC4D30087A8EF /* LoggerKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -912,8 +927,8 @@
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = CollageTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx";
-				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -925,8 +940,8 @@
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = CollageTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx";
-				LIBRARY_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
