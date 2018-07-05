@@ -188,7 +188,7 @@ public class CXFCollage {
             Logger.log(debug: "Collage Spacing: Not specified")
         }
 
-        if let hexColorString = collageXML["background"].element?.attribute(by: "color")?.text, let backgroundColor = CGColor.init(hexARGB: hexColorString) {
+        if let hexColorString = collageXML["background"].element?.attribute(by: "color")?.text, let backgroundColor = CGColor.cgColor(hexARGB: hexColorString) {
             self.backgroundColor = backgroundColor
             Logger.log(debug: "Collage Background Color: \(hexColorString) -> \(self.backgroundColor.components?.debugDescription ?? "--")")
         }
@@ -233,7 +233,7 @@ public class CXFCollage {
         self.context.setFillColor(backgroundColor)
         self.context.fill(collageRect)
 
-        if let backgroundImageURL = self.backgroundImageURL, let backgroundImage = CGImage.init(url: backgroundImageURL, ratio: self.size.ratio) {
+        if let backgroundImageURL = self.backgroundImageURL, let backgroundImage = CGImage.cgImage(url: backgroundImageURL, ratio: self.size.ratio) {
             Logger.log(debug: "Drawing background image: \(backgroundImageURL.path)")
 
             self.context.draw(backgroundImage, in: collageRect)

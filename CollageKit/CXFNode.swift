@@ -104,7 +104,7 @@ class CXFNode {
     internal var image: CGImage? {
         Logger.log(debug: "Loading node image \(imageURL.lastPathComponent)...")
 
-        return CGImage.init(url: self.imageURL, ratio: self.collageArea.size.ratio)
+        return CGImage.cgImage(url: self.imageURL, ratio: self.collageArea.size.ratio)
     }
 }
 
