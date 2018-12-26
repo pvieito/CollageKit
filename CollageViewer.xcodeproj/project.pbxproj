@@ -29,7 +29,6 @@
 		AAC1D6541EB01BD1009E0956 /* CXFCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B4401EACC1360047E1DD /* CXFCollage.swift */; };
 		AAC1D6551EB01BD1009E0956 /* CXFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2614231EACE17E004E13E9 /* CXFNode.swift */; };
 		AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
-		AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */ = {isa = PBXBuildFile; fileRef = AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */; };
 		AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
 		AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369551EB101A800DAC0D9 /* CXFDocument.swift */; };
@@ -262,7 +261,6 @@
 		AAC1D63E1EB01BA7009E0956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC1D6471EB01BC0009E0956 /* CollageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC1D64A1EB01BC0009E0956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = CollageTool.py; sourceTree = "<group>"; };
 		AAD369551EB101A800DAC0D9 /* CXFDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFDocument.swift; sourceTree = "<group>"; };
 		AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommandLineKit.xcodeproj; path = ../CommandLineKit/CommandLineKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,17 +392,8 @@
 				AA37B4401EACC1360047E1DD /* CXFCollage.swift */,
 				AA2614231EACE17E004E13E9 /* CXFNode.swift */,
 				AAC1D64A1EB01BC0009E0956 /* Info.plist */,
-				AAD368EE1EB0C24A00DAC0D9 /* Python */,
 			);
 			path = CollageKit;
-			sourceTree = "<group>";
-		};
-		AAD368EE1EB0C24A00DAC0D9 /* Python */ = {
-			isa = PBXGroup;
-			children = (
-				AAD368EF1EB0C24A00DAC0D9 /* CollageTool.py */,
-			);
-			path = Python;
 			sourceTree = "<group>";
 		};
 		AAD368F11EB0C25B00DAC0D9 /* Products */ = {
@@ -712,7 +701,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD368F01EB0C24A00DAC0D9 /* CollageTool.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

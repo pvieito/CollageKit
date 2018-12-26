@@ -14,7 +14,6 @@ import LoggerKit
 import FoundationKit
 
 public class CXFCollage {
-
     public enum CollageError: LocalizedError {
         case versionNotSupported(Int)
         case collageThemeNotSupported(String)
@@ -50,7 +49,6 @@ public class CXFCollage {
         case landscape
 
         func size(for format: CGSize) -> CGSize {
-
             switch self {
             case .portrait:
                 return format.portrait
@@ -111,7 +109,6 @@ public class CXFCollage {
 
 
         // Required Attributes
-
         guard let collageElement = self.collageXML.element else {
             throw CollageError.invalidCollageFile
         }
