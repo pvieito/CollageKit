@@ -4,7 +4,11 @@
 
 ## Build generated
 build/
+.build/
 DerivedData/
+Package.pins
+Package.resolved
+/Packages/
 
 ## Various settings
 .DS_Store

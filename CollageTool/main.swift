@@ -53,8 +53,7 @@ for collagePath in collagePaths {
 
         let image = try collage.render()
 
-        let imageURL = try image.temporaryFile()
-        NSWorkspace.shared.open(imageURL)
+        try image.temporaryFile().open()
     }
     catch {
         Logger.log(error: error)
