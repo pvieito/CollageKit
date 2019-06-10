@@ -37,7 +37,6 @@ if helpOption.value {
 Logger.logMode = .commandLine
 Logger.logLevel = verboseOption.value ? .debug : .info
 
-
 guard let collagePaths = collagesOption.value?.pathURLs, collagePaths.count > 0 else {
     Logger.log(error: "No input files specified.")
     exit(EX_USAGE)

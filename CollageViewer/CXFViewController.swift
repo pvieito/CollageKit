@@ -13,7 +13,6 @@ import SandboxKit
 import CollageKit
 
 class CXFViewController: NSViewController, NSWindowDelegate {
-
     @IBOutlet weak var activityIndicator: NSProgressIndicator!
     @IBOutlet weak var imageView: IKImageView!
 
@@ -58,7 +57,6 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
     func load(imageURL: URL) {
         self.imageView.isHidden = false
-
         self.imageView.setImageWith(imageURL)
     }
 
@@ -88,7 +86,6 @@ class CXFViewController: NSViewController, NSWindowDelegate {
 
     @discardableResult
     override func presentError(_ error: Error) -> Bool {
-
         Logger.log(error: error)
         if let window = self.view.window {
             self.presentError(error, modalFor: window, delegate: nil, didPresent: nil, contextInfo: nil)
@@ -96,7 +93,6 @@ class CXFViewController: NSViewController, NSWindowDelegate {
         else {
             return super.presentError(error)
         }
-
         return false
     }
 }

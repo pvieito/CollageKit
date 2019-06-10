@@ -12,7 +12,6 @@ import CoreGraphicsKit
 import LoggerKit
 
 class CXFDocument: NSDocument {
-
     var collage: CXFCollage? = nil
     var imageURL: URL? = nil
 
@@ -35,7 +34,6 @@ class CXFDocument: NSDocument {
     }
 
     override func read(from url: URL, ofType typeName: String) throws {
-
         switch typeName {
         case "public.jpeg":
             self.imageURL = url
@@ -55,7 +53,6 @@ class CXFDocument: NSDocument {
     }
 
     override func saveAs(_ sender: Any?) {
-        
         if let window = self.windowForSheet, let image = collage?.image {
             let savePanel = NSSavePanel()
 
