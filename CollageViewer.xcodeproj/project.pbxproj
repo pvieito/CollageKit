@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA558B0A1EC292E90099A8B0 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
 		AA558B121EC293D60099A8B0 /* CoreGraphicsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA558B051EC292B90099A8B0 /* CoreGraphicsKit.framework */; };
+		AAB5326A22AF1F3200682298 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = AAB5326922AF1F3200682298 /* SWXMLHash */; };
 		AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710721EBFC4D30087A8EF /* LoggerKit.framework */; };
 		AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; };
 		AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAB710791EBFC5010087A8EF /* FoundationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -29,8 +30,6 @@
 		AAC1D6541EB01BD1009E0956 /* CXFCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B4401EACC1360047E1DD /* CXFCollage.swift */; };
 		AAC1D6551EB01BD1009E0956 /* CXFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2614231EACE17E004E13E9 /* CXFNode.swift */; };
 		AAC1D6581EB01C16009E0956 /* CollageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */; };
-		AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; };
-		AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAD369561EB101A800DAC0D9 /* CXFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD369551EB101A800DAC0D9 /* CXFDocument.swift */; };
 		AAFE81E61EC0997F008C01A3 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFE81E31EC0997A008C01A3 /* CommandLineKit.framework */; };
 /* End PBXBuildFile section */
@@ -99,55 +98,6 @@
 			remoteGlobalIDString = AA2563C41E57639E0037CBED;
 			remoteInfo = FoundationKit;
 		};
-		AA7F02421EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CD9D052B1A757D8B003CCB21;
-			remoteInfo = "SWXMLHash OSX";
-		};
-		AA7F024C1EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD6083EF196CA106000B4F8D;
-			remoteInfo = "SWXMLHash iOS";
-		};
-		AA7F024E1EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD6083FA196CA106000B4F8D;
-			remoteInfo = "SWXMLHash iOS Tests";
-		};
-		AA7F02501EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD9D05361A757D8B003CCB21;
-			remoteInfo = "SWXMLHash OSX Tests";
-		};
-		AA7F02521EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDDEC74C1BF6311A00AB138B;
-			remoteInfo = "SWXMLHash tvOS";
-		};
-		AA7F02541EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDDEC7551BF6311B00AB138B;
-			remoteInfo = "SWXMLHash tvOS Tests";
-		};
-		AA7F02561EE795FC00597173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDDEC7681BF6316C00AB138B;
-			remoteInfo = "SWXMLHash watchOS";
-		};
 		AA804C5F22455F950006A522 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */;
@@ -197,20 +147,6 @@
 			remoteGlobalIDString = AAC1D6461EB01BC0009E0956;
 			remoteInfo = CollageKit;
 		};
-		AAD368F41EB0C25B00DAC0D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD9D052C1A757D8B003CCB21;
-			remoteInfo = SWXMLHash;
-		};
-		AAD369131EB0C2CF00DAC0D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CD9D052B1A757D8B003CCB21;
-			remoteInfo = SWXMLHash;
-		};
 		AAFE81E21EC0997A008C01A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AAFE81DD1EC0997A008C01A3 /* CommandLineKit.xcodeproj */;
@@ -239,7 +175,6 @@
 				AAB710801EBFC5120087A8EF /* LoggerKit.framework in Embed Frameworks */,
 				AA4F545C1ED8889F000C1333 /* SandboxKit.framework in Embed Frameworks */,
 				AAC1D64F1EB01BC0009E0956 /* CollageKit.framework in Embed Frameworks */,
-				AAD369121EB0C2CF00DAC0D9 /* SWXMLHash.framework in Embed Frameworks */,
 				AA558B071EC292C30099A8B0 /* CoreGraphicsKit.framework in Embed Frameworks */,
 				AAB7107C1EBFC5120087A8EF /* FoundationKit.framework in Embed Frameworks */,
 			);
@@ -253,7 +188,6 @@
 		AA2614231EACE17E004E13E9 /* CXFNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFNode.swift; sourceTree = "<group>"; };
 		AA37B4171EAAAFC50047E1DD /* CollageTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CollageTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37B41A1EAAAFC50047E1DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = ../SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		AA37B4401EACC1360047E1DD /* CXFCollage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXFCollage.swift; sourceTree = "<group>"; };
 		AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SandboxKit.xcodeproj; path = ../SandboxKit/SandboxKit.xcodeproj; sourceTree = "<group>"; };
 		AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreGraphicsKit.xcodeproj; path = ../CoreGraphicsKit/CoreGraphicsKit.xcodeproj; sourceTree = "<group>"; };
@@ -302,8 +236,8 @@
 			files = (
 				AA558B0A1EC292E90099A8B0 /* CoreGraphicsKit.framework in Frameworks */,
 				AAB7107A1EBFC50A0087A8EF /* FoundationKit.framework in Frameworks */,
+				AAB5326A22AF1F3200682298 /* SWXMLHash in Frameworks */,
 				AAB710731EBFC4EC0087A8EF /* LoggerKit.framework in Frameworks */,
-				AAD3690C1EB0C2C300DAC0D9 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +252,6 @@
 				AA558AFE1EC292B90099A8B0 /* CoreGraphicsKit.xcodeproj */,
 				AAB710741EBFC5010087A8EF /* FoundationKit.xcodeproj */,
 				AAB7106D1EBFC4D30087A8EF /* LoggerKit.xcodeproj */,
-				AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */,
 				AA804C6A22455FEF0006A522 /* Package.swift */,
 				AAC1D6481EB01BC0009E0956 /* CollageKit */,
 				AA37B4191EAAAFC50047E1DD /* CollageTool */,
@@ -405,20 +338,6 @@
 			path = CollageKit;
 			sourceTree = "<group>";
 		};
-		AAD368F11EB0C25B00DAC0D9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AA7F024D1EE795FC00597173 /* SWXMLHash.framework */,
-				AA7F024F1EE795FC00597173 /* SWXMLHash iOS Tests.xctest */,
-				AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */,
-				AA7F02511EE795FC00597173 /* SWXMLHash OSX Tests.xctest */,
-				AA7F02531EE795FC00597173 /* SWXMLHash.framework */,
-				AA7F02551EE795FC00597173 /* SWXMLHash tvOS Tests.xctest */,
-				AA7F02571EE795FC00597173 /* SWXMLHash.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		AAFE81DE1EC0997A008C01A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,7 +390,6 @@
 			);
 			dependencies = (
 				AAC1D64D1EB01BC0009E0956 /* PBXTargetDependency */,
-				AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */,
 				AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */,
 				AAB710821EBFC5120087A8EF /* PBXTargetDependency */,
 				AA558B091EC292C30099A8B0 /* PBXTargetDependency */,
@@ -497,9 +415,11 @@
 				AA7F023D1EE795FC00597173 /* PBXTargetDependency */,
 				AA7F023F1EE795FC00597173 /* PBXTargetDependency */,
 				AA7F02411EE795FC00597173 /* PBXTargetDependency */,
-				AA7F02431EE795FC00597173 /* PBXTargetDependency */,
 			);
 			name = CollageKit;
+			packageProductDependencies = (
+				AAB5326922AF1F3200682298 /* SWXMLHash */,
+			);
 			productName = CollageKit;
 			productReference = AAC1D6471EB01BC0009E0956 /* CollageKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -512,7 +432,7 @@
 			attributes = {
 				CLASSPREFIX = CXF;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Pedro José Pereira Vieito";
 				TargetAttributes = {
 					AA37B4161EAAAFC50047E1DD = {
@@ -552,6 +472,9 @@
 				Base,
 			);
 			mainGroup = AA37B40E1EAAAFC50047E1DD;
+			packageReferences = (
+				AAB5326822AF1F3200682298 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
+			);
 			productRefGroup = AA37B4181EAAAFC50047E1DD /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -574,10 +497,6 @@
 				{
 					ProductGroup = AA4F54561ED8888A000C1333 /* Products */;
 					ProjectRef = AA4F54551ED8888A000C1333 /* SandboxKit.xcodeproj */;
-				},
-				{
-					ProductGroup = AAD368F11EB0C25B00DAC0D9 /* Products */;
-					ProjectRef = AA37B4391EAAB4610047E1DD /* SWXMLHash.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -618,48 +537,6 @@
 			remoteRef = AA628B881F093860003B7D25 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		AA7F024D1EE795FC00597173 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = AA7F024C1EE795FC00597173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AA7F024F1EE795FC00597173 /* SWXMLHash iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SWXMLHash iOS Tests.xctest";
-			remoteRef = AA7F024E1EE795FC00597173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AA7F02511EE795FC00597173 /* SWXMLHash OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SWXMLHash OSX Tests.xctest";
-			remoteRef = AA7F02501EE795FC00597173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AA7F02531EE795FC00597173 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = AA7F02521EE795FC00597173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AA7F02551EE795FC00597173 /* SWXMLHash tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SWXMLHash tvOS Tests.xctest";
-			remoteRef = AA7F02541EE795FC00597173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AA7F02571EE795FC00597173 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = AA7F02561EE795FC00597173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		AA804C6022455F950006A522 /* CommandLineKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -686,13 +563,6 @@
 			fileType = wrapper.framework;
 			path = FoundationKit.framework;
 			remoteRef = AAB710781EBFC5010087A8EF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AAD368F51EB0C25B00DAC0D9 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = AAD368F41EB0C25B00DAC0D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AAFE81E31EC0997A008C01A3 /* CommandLineKit.framework */ = {
@@ -779,11 +649,6 @@
 			name = FoundationKit;
 			targetProxy = AA7F02401EE795FC00597173 /* PBXContainerItemProxy */;
 		};
-		AA7F02431EE795FC00597173 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SWXMLHash OSX";
-			targetProxy = AA7F02421EE795FC00597173 /* PBXContainerItemProxy */;
-		};
 		AAB7107E1EBFC5120087A8EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FoundationKit;
@@ -798,11 +663,6 @@
 			isa = PBXTargetDependency;
 			target = AAC1D6461EB01BC0009E0956 /* CollageKit */;
 			targetProxy = AAC1D64C1EB01BC0009E0956 /* PBXContainerItemProxy */;
-		};
-		AAD369141EB0C2CF00DAC0D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SWXMLHash;
-			targetProxy = AAD369131EB0C2CF00DAC0D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -927,7 +787,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -936,10 +797,14 @@
 		AA37B41F1EAAAFC50047E1DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = CollageTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				LIBRARY_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -950,10 +815,14 @@
 		AA37B4201EAAAFC50047E1DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = CollageTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				LIBRARY_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -970,8 +839,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CollageViewer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -989,8 +862,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CollageViewer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1014,7 +891,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = CollageKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1040,7 +921,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = CollageKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvieito.CollageKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1091,6 +976,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAB5326822AF1F3200682298 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAB5326922AF1F3200682298 /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAB5326822AF1F3200682298 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA37B40F1EAAAFC50047E1DD /* Project object */;
 }

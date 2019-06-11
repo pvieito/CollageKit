@@ -22,7 +22,7 @@ let package = Package(
         .package(path: "../CommandLineKit"),
         .package(path: "../FoundationKit"),
         .package(path: "../CoreGraphicsKit"),
-        .package(url: "https://github.com/drmohundro/SWXMLHash.git", from: "4.7.0")
+        .package(url: "https://github.com/drmohundro/SWXMLHash.git", .branch("master"))
     ],
     targets: [
         .target(
