@@ -61,18 +61,6 @@
 	<string>NSApplication</string>
 	<key>NSSupportsAutomaticTermination</key>
 	<string>YES</string>
-	<key>NSUbiquitousContainers</key>
-	<dict>
-		<key>iCloud.com.pvieito.CollageViewer</key>
-		<dict>
-			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
-			<true/>
-			<key>NSUbiquitousContainerName</key>
-			<string>Collages</string>
-			<key>NSUbiquitousContainerSupportedFolderLevels</key>
-			<string>Any</string>
-		</dict>
-	</dict>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
