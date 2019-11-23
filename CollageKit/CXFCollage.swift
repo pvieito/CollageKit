@@ -6,6 +6,7 @@
 //  Copyright © 2017 Pedro José Pereira Vieito. All rights reserved.
 //
 
+#if false
 import Foundation
 import CoreGraphics
 import CoreGraphicsKit
@@ -320,3 +321,4 @@ public class CXFCollage {
         }
     }
 }
+#endif

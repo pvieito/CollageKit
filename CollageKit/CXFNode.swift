@@ -6,6 +6,7 @@
 //  Copyright © 2017 Pedro José Pereira Vieito. All rights reserved.
 //
 
+#if false
 import Foundation
 import CoreGraphics
 import CoreGraphicsKit
@@ -107,4 +108,4 @@ class CXFNode {
         return CGImage.cgImage(url: self.imageURL, ratio: self.collageArea.size.ratio)
     }
 }
-
+#endif

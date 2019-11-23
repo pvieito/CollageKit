@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<collage version="2" format="297:210" orientation="landscape" theme="framegrid" shadows="1" captions="1" albumUID="391bc5418add18aa4609571cfb7787a9">
+ <albumTitle>TEST_COLLAGE</albumTitle>
+ <albumDate>1993-03-20</albumDate>
+ <background type="solid" color="FFFFFFFF"/>
+ <spacing value="0.245016"/>
+ <node x="0.2000" y="0.0000" w="0.250000" h="0.234807" theta="0.100000" scale="494.000000">
+  <theme>noborder</theme>
+  <src>SeaPhoto.png</src>
+  <uid>08622eeed71b74d1ab8cc46e7fe852c2</uid>
+ </node>
+ <node x="0.5000" y="0.5000" w="0.2500" h="0.2500" theta="0.000000" scale="494.000000">
+  <theme>noborder</theme>
+  <src>MakePass.png</src>
+  <uid>08622eeed71b74d1ab8cc46e7fe852c2</uid>
+ </node>
+ <node x="0.250000" y="0.765193" w="0.250000" h="0.234807" theta="0.000000" scale="240.000000">
+  <theme>noborder</theme>
+  <src>$HomeDir/__FAKE__.jpg</src>
+  <uid>f1339c0cea4e60de0000000000000000</uid>
+ </node>
+</collage>

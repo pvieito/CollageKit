@@ -14,7 +14,7 @@ import LoggerKit
 import CommandLineKit
 import CollageKit
 
-let collagesOption = MultiStringOption(shortFlag: "i", longFlag: "input", required: true, helpMessage: "Input collage files (.cxf extension).")
+let collagesOption = StringOption(shortFlag: "i", longFlag: "input", required: true, helpMessage: "Input collage file.")
 let verboseOption = BoolOption(shortFlag: "v", longFlag: "verbose", helpMessage: "Verbose mode.")
 let helpOption = BoolOption(shortFlag: "h", longFlag: "help", helpMessage: "Prints a help message.")
 
@@ -37,24 +37,25 @@ if helpOption.value {
 Logger.logMode = .commandLine
 Logger.logLevel = verboseOption.value ? .debug : .info
 
-guard let collagePaths = collagesOption.value?.pathURLs, collagePaths.count > 0 else {
+guard let collagePath = collagesOption.value?.pathURL else {
     Logger.log(error: "No input files specified.")
     exit(EX_USAGE)
 }
 
-for collagePath in collagePaths {
-    do {
-        let collage = try CXFCollage(contentsOf: collagePath)
-        Logger.log(important: collage.name)
-        Logger.log(info: "Title: \(collage.albumTitle ?? "--")")
-        Logger.log(info: "Date: \(collage.albumDate ?? "--")")
-        Logger.log(info: "Size: \(collage.size)")
-
-        let image = try collage.render()
-
-        try image.temporaryFile().open()
+do {
+    let collage = try Collage(contentsOf: collagePath)
+    Logger.log(important: collage.name)
+    Logger.log(info: "Title: \(collage.albumTitle ?? "--")")
+    Logger.log(info: "Date: \(collage.albumDate ?? "--")")
+    
+    if let imagesDirectoryURL = collage.imagesDirectoryURL {
+        Logger.log(verbose: "Images Directory: \(imagesDirectoryURL.path)")
     }
-    catch {
-        Logger.log(error: error)
-    }
+    
+    let image = try collage.render()
+    
+    try image.temporaryFile().open()
+}
+catch {
+    Logger.log(fatalError: error)
 }

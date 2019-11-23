@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "CollageViewer",
+    name: "CollageKit",
     platforms: [
         .macOS(.v10_12)
     ],
@@ -22,7 +22,7 @@ let package = Package(
         .package(path: "../CommandLineKit"),
         .package(path: "../FoundationKit"),
         .package(path: "../CoreGraphicsKit"),
-        .package(url: "https://github.com/drmohundro/SWXMLHash.git", .branch("master"))
+        .package(url: "https://github.com/MaxDesiatov/XMLCoder.git", .branch("master"))
     ],
     targets: [
         .target(
@@ -32,8 +32,12 @@ let package = Package(
         ),
         .target(
             name: "CollageKit",
-            dependencies: ["LoggerKit", "FoundationKit", "CoreGraphicsKit", "SWXMLHash"],
+            dependencies: ["LoggerKit", "FoundationKit", "CoreGraphicsKit", "XMLCoder"],
             path: "CollageKit"
+        ),
+        .testTarget(
+            name: "CollageKitTests",
+            dependencies: ["CollageKit", "FoundationKit"]
         )
     ]
 )
