@@ -6,7 +6,7 @@
 //  Copyright © 2017 Pedro José Pereira Vieito. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 import FoundationKit
 import CoreGraphicsKit
 import LoggerKit
