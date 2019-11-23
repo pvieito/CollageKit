@@ -123,9 +123,9 @@ extension Collage.Structure.Orientation {
 
 extension Collage {
     func collageImageURL(for collagePath: String) -> URL {
-        if collagePath.hasPrefix("$"), let userHomeURL = FileManager.default.realHomeDirectoryForCurrentUser {
+        if collagePath.hasPrefix("$") {
             let cxfPath = collagePath.applyingRegularExpression(pattern: "^\\$(HomeDir\\/)?", sustitution: "")
-            return URL(fileURLWithPath: cxfPath, relativeTo: userHomeURL)
+            return URL(fileURLWithPath: cxfPath, relativeTo: FileManager.default.realHomeDirectoryForCurrentUser)
         }
         else {
             return URL(fileURLWithPath: collagePath, relativeTo: self.collageURL)
