@@ -44,10 +44,12 @@ class CollageTests: XCTestCase {
             collage.collageImageURL(for: collage.nodes[2].src).resolvingSymlinksInPath(),
             FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("__FAKE__.jpg").resolvingSymlinksInPath())
         
+        #if canImport(CoreGraphics)
         let image = try collage.render(for: 2048)
         
         #if Xcode
         try image.open()
+        #endif
         #endif
     }
 }

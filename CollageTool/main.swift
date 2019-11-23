@@ -8,7 +8,6 @@
 
 import Cocoa
 import FoundationKit
-import CoreGraphics
 import CoreGraphicsKit
 import LoggerKit
 import CommandLineKit
@@ -52,9 +51,9 @@ do {
         Logger.log(verbose: "Images Directory: \(imagesDirectoryURL.path)")
     }
     
-    let image = try collage.render()
-    
-    try image.temporaryFile().open()
+    #if canImport(CoreGraphics)
+    try collage.render().open()
+    #endif
 }
 catch {
     Logger.log(fatalError: error)
