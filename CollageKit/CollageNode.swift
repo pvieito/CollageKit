@@ -7,10 +7,6 @@
 //
 
 import Foundation
-import CoreGraphics
-import CoreGraphicsKit
-import SWXMLHash
-import LoggerKit
 
 struct CollageNode: Codable {
     private let x: Double
