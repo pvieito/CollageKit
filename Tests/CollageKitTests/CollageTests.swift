@@ -55,6 +55,8 @@ class CollageTests: XCTestCase {
     }
     
     func testInvalidCollages() throws {
+        XCTAssertThrowsError(try Collage(contentsOf: FileManager.default.temporaryDirectory))
+        
         var testCount = 0
         
         for collageName in try FileManager.default.contentsOfDirectory(atPath: CollageTests.testInvalidCollagesURL.path) {
