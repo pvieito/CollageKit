@@ -27,7 +27,7 @@ public struct Collage {
             case landscape
         }
         
-        let version: String
+        let version: Int
         let format: String
         let orientation: Orientation
         let theme: String
@@ -44,7 +44,9 @@ public struct Collage {
     }
     
     public static let defaultRenderWidth: Double = 2100
-    
+    internal static let collageExtension = "cxf"
+    internal static let supportedVersions = [2]
+
     internal let collageURL: URL
     internal let collageRatio: CGRatio
     internal let collageDescription: Structure
@@ -78,9 +80,9 @@ extension Collage {
     public init(contentsOf url: URL) throws {
         let collageData = try Data(contentsOf: url)
         let decoder = XMLDecoder()
-        self.collageDescription = try! decoder.decode(Structure.self, from: collageData)
+        self.collageDescription = try decoder.decode(Structure.self, from: collageData)
         
-        guard self.collageDescription.version == "2" else {
+        guard Collage.supportedVersions.contains(self.collageDescription.version) else {
             throw Error.decodingFormatError
         }
         
