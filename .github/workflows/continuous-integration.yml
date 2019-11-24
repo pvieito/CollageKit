@@ -14,32 +14,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
-        with:
-          path: CollageKit
-      - uses: actions/checkout@v1
-        with:
-          repository: pvieito/LoggerKit
-          ref: refs/heads/master
-          token: ${{ secrets.GITHUB_PAT }}
-          path: LoggerKit
-      - uses: actions/checkout@v1
-        with:
-          repository: pvieito/CommandLineKit
-          ref: refs/heads/master
-          token: ${{ secrets.GITHUB_PAT }}
-          path: CommandLineKit
-      - uses: actions/checkout@v1
-        with:
-          repository: pvieito/FoundationKit
-          ref: refs/heads/master
-          token: ${{ secrets.GITHUB_PAT }}
-          path: FoundationKit
-      - uses: actions/checkout@v1
-        with:
-          repository: pvieito/CoreGraphicsKit
-          ref: refs/heads/master
-          token: ${{ secrets.GITHUB_PAT }}
-          path: CoreGraphicsKit
       - name: Install Swift
         uses: YOCKOW/Action-setup-swift@master
         with:
