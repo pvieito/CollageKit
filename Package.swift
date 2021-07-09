@@ -22,7 +22,7 @@ let package = Package(
         .package(url: "git@github.com:pvieito/LoggerKit.git", .branch("master")),
         .package(url: "git@github.com:pvieito/FoundationKit.git", .branch("master")),
         .package(url: "git@github.com:pvieito/CoreGraphicsKit.git", .branch("master")),
-        .package(url: "https://github.com/MaxDesiatov/XMLCoder.git", .branch("master"))
+        .package(url: "https://github.com/MaxDesiatov/XMLCoder.git", from: "0.12.0")
     ],
     targets: [
         .target(
