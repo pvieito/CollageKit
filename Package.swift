@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -25,7 +25,7 @@ let package = Package(
         .package(url: "https://github.com/MaxDesiatov/XMLCoder.git", from: "0.12.0")
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "CollageTool",
             dependencies: ["CollageKit", "LoggerKit", "CommandLineKit", "FoundationKit"],
             path: "CollageTool"
@@ -37,7 +37,8 @@ let package = Package(
         ),
         .testTarget(
             name: "CollageKitTests",
-            dependencies: ["CollageKit", "FoundationKit"]
+            dependencies: ["CollageKit", "FoundationKit"],
+            resources: [.process("Resources")]
         )
     ]
 )

@@ -13,9 +13,8 @@ import CoreGraphicsKit
 @testable import CollageKit
 
 class CollageTests: XCTestCase {
-    static let testBundle = Bundle.currentModuleBundle()
+    static let testBundle = Bundle.module
     static let testCollageURL = CollageTests.testBundle.url(forResource: "TestCollage", withExtension: "cxf")!
-    static let testInvalidCollagesURL = CollageTests.testBundle.resourceURL!.appendingPathComponent("InvalidCollages")
     
     func testCollage() throws {
         let collage = try Collage(contentsOf: CollageTests.testCollageURL)
@@ -59,8 +58,9 @@ class CollageTests: XCTestCase {
         
         var testCount = 0
         
-        for collageName in try FileManager.default.contentsOfDirectory(atPath: CollageTests.testInvalidCollagesURL.path) {
-            let invalidCollageURL = CollageTests.testInvalidCollagesURL.appendingPathComponent(collageName)
+        for collageName in try FileManager.default.contentsOfDirectory(atPath: CollageTests.testBundle.resourcePath!) {
+            guard collageName.starts(with: "InvalidCollage-") else { continue }
+            let invalidCollageURL = CollageTests.testBundle.resourceURL!.appendingPathComponent(collageName)
             guard invalidCollageURL.pathExtension == Collage.collageExtension else { continue }
             XCTAssertThrowsError(try Collage(contentsOf: invalidCollageURL))
             testCount += 1
