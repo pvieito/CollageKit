@@ -108,7 +108,7 @@ extension Collage {
         if let backgroundImageSource = self.collageDescription.background?.src {
             imageSources.append(backgroundImageSource)
         }
-        return imageSources.map({ self.collageImageURL(for: $0) }).commonAntecessor
+        return imageSources.map({ self.collageImageURL(for: $0) }).commonParentDirectory
     }
 }
 
