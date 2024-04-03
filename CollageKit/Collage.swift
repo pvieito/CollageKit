@@ -127,7 +127,7 @@ extension Collage {
     func collageImageURL(for collagePath: String) -> URL {
         if collagePath.hasPrefix("$") {
             let collagePath = collagePath.applyingRegularExpression(pattern: "^\\$(HomeDir\\/)?", substitution: "")
-            return URL(fileURLWithPath: collagePath, relativeTo: FileManager.default.realHomeDirectoryForCurrentUser)
+            return URL(fileURLWithPath: collagePath, relativeTo: FileManager.default.unsandboxedHomeDirectoryForCurrentUser)
         }
         else {
             return URL(fileURLWithPath: collagePath, relativeTo: self.collageURL)
