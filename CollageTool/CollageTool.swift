@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  CollageTool.swift
 //  CollageTool
 //
 //  Created by Pedro José Pereira Vieito on 21/4/17.
@@ -13,6 +13,7 @@ import LoggerKit
 import ArgumentParser
 import CollageKit
 
+@main
 struct CollageTool: ParsableCommand {
     static var configuration: CommandConfiguration {
         return CommandConfiguration(commandName: String(describing: Self.self))
@@ -47,5 +48,3 @@ struct CollageTool: ParsableCommand {
         }
     }
 }
-
-CollageTool.main()
