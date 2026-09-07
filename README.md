@@ -10,4 +10,4 @@ $ swift run CollageTool -i CollageName.cxf
 
 ## Dependencies
 
-- Swift 5.1+
+- Swift 6.2+

@@ -1,11 +1,11 @@
-// swift-tools-version:5.7
+// swift-tools-version:6.2
 
 import PackageDescription
 
 let package = Package(
     name: "CollageKit",
     platforms: [
-        .macOS(.v10_13)
+        .macOS(.v26),
     ],
     products: [
         .executable(
@@ -27,18 +27,32 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "CollageTool",
-            dependencies: ["CollageKit", "LoggerKit", "FoundationKit", .product(name: "ArgumentParser", package: "swift-argument-parser")],
+            dependencies: [
+                "CollageKit",
+                "LoggerKit",
+                "FoundationKit",
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            ],
             path: "CollageTool"
         ),
         .target(
             name: "CollageKit",
-            dependencies: ["LoggerKit", "FoundationKit", "CoreGraphicsKit", "XMLCoder"],
+            dependencies: [
+                "LoggerKit",
+                "FoundationKit",
+                "CoreGraphicsKit",
+                "XMLCoder",
+            ],
             path: "CollageKit"
         ),
         .testTarget(
             name: "CollageKitTests",
-            dependencies: ["CollageKit", "FoundationKit"],
+            dependencies: [
+                "CollageKit",
+                "FoundationKit",
+            ],
             resources: [.process("Resources")]
         )
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )
